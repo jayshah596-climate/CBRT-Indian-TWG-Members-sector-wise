@@ -329,11 +329,11 @@ export default function MindMap() {
         const tier = node.tier || '';
         const anchor = isAnchor(tier);
         const core = isCore(tier);
-        const r = anchor ? 22 : core ? 17 : 13;
+        const hasPhoto = !!(node.member?.photo);
+        const r = anchor ? (hasPhoto ? 28 : 22) : core ? (hasPhoto ? 22 : 17) : (hasPhoto ? 16 : 13);
         const strokeColor = color;
         const strokeW = anchor ? 2.5 : core ? 2 : 1.5;
         const strokeOp = anchor ? 1 : core ? 0.8 : 0.5;
-        const hasPhoto = !!(node.member?.photo);
         const clipId = `clip-${node.id}`;
 
         if (anchor) {
@@ -362,7 +362,7 @@ export default function MindMap() {
             .attr('stroke-opacity', strokeOp);
 
           // Photo image clipped to circle
-          ng.append('image')
+          const imgNode = ng.append('image')
             .attr('href', node.member!.photo!)
             .attr('x', -r)
             .attr('y', -r)
@@ -370,6 +370,23 @@ export default function MindMap() {
             .attr('height', r * 2)
             .attr('clip-path', `url(#${clipId})`)
             .attr('preserveAspectRatio', 'xMidYMin slice');
+
+          // Fallback: if image fails to load, remove it and show initials
+          const memberRef = node.member!;
+          imgNode.on('error', function () {
+            d3.select(this).remove();
+            const initials = memberRef.name
+              .replace(/^Dr\.?\s+|^Mr\.?\s+|^Ms\.?\s+/i, '')
+              .split(' ').filter(Boolean).slice(0, 2)
+              .map((w: string) => w[0].toUpperCase()).join('');
+            ng.append('text')
+              .attr('text-anchor', 'middle')
+              .attr('dominant-baseline', 'middle')
+              .attr('font-size', Math.round(r * 0.55))
+              .attr('fill', color)
+              .attr('font-weight', 700)
+              .text(initials);
+          });
         } else {
           ng.append('circle')
             .attr('r', r)
@@ -656,17 +673,35 @@ function DetailPanel({ info, onClose }: { info: SelectedInfo; onClose: () => voi
       }}>
         {/* Header */}
         <div style={{
-          padding: '20px 20px 16px',
+          padding: '14px 20px 16px',
           borderBottom: '1px solid rgba(255,255,255,0.07)',
-          background: `linear-gradient(135deg, ${color}15, transparent)`,
+          background: `linear-gradient(160deg, ${color}18, transparent 70%)`,
           flexShrink: 0,
         }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12 }}>
-            {/* Photo avatar */}
-            <MemberAvatar member={member} color={color} size={68} />
+          {/* Close button */}
+          <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 10 }}>
+            <button onClick={onClose} style={{
+              background: 'rgba(255,255,255,0.06)', border: 'none', borderRadius: 6,
+              color: '#94a3b8', cursor: 'pointer', fontSize: 16, padding: '4px 8px', lineHeight: 1,
+            }}>✕</button>
+          </div>
 
-            <div style={{ flex: 1, minWidth: 0 }}>
-              <div style={{ display: 'flex', gap: 6, marginBottom: 6, flexWrap: 'wrap', alignItems: 'center' }}>
+          {/* Large centered photo */}
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12 }}>
+            <div style={{ position: 'relative' }}>
+              <MemberAvatar member={member} color={color} size={120} />
+              {anchorMember && (
+                <span style={{
+                  position: 'absolute', bottom: 2, right: 2,
+                  fontSize: 14, background: '#1e293b', borderRadius: '50%',
+                  lineHeight: 1, padding: 3, border: `1px solid ${color}40`,
+                }}>⚓</span>
+              )}
+            </div>
+
+            {/* Name + org */}
+            <div style={{ textAlign: 'center', width: '100%' }}>
+              <div style={{ display: 'flex', gap: 5, marginBottom: 7, flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
                 {sector && (
                   <span style={{
                     fontSize: 9, padding: '2px 8px', borderRadius: 10,
@@ -682,33 +717,22 @@ function DetailPanel({ info, onClose }: { info: SelectedInfo; onClose: () => voi
                 }}>
                   {member.priority_tier}
                 </span>
-                {anchorMember && (
-                  <span style={{
-                    fontSize: 9, padding: '2px 8px', borderRadius: 10,
-                    background: 'rgba(99,102,241,0.15)', color: '#818cf8',
-                    border: '1px solid rgba(99,102,241,0.3)',
-                    fontWeight: 700,
-                  }}>⚓ Anchor</span>
-                )}
               </div>
-              <div style={{ fontSize: 15, fontWeight: 800, color: '#f1f5f9', lineHeight: 1.3, marginBottom: 3 }}>
+              <div style={{ fontSize: 16, fontWeight: 800, color: '#f1f5f9', lineHeight: 1.3, marginBottom: 3 }}>
                 {member.name}
               </div>
-              <div style={{ fontSize: 11, color: '#94a3b8', lineHeight: 1.4, marginBottom: 3 }}>
-                {member.title}
-              </div>
-              <div style={{ fontSize: 11, color, fontWeight: 600, lineHeight: 1.3 }}>
+              {member.title && (
+                <div style={{ fontSize: 11, color: '#94a3b8', lineHeight: 1.4, marginBottom: 3 }}>
+                  {member.title}
+                </div>
+              )}
+              <div style={{ fontSize: 12, color, fontWeight: 600, lineHeight: 1.3 }}>
                 {member.organisation}
               </div>
             </div>
-            <button onClick={onClose} style={{
-              background: 'rgba(255,255,255,0.06)', border: 'none', borderRadius: 6,
-              color: '#94a3b8', cursor: 'pointer', fontSize: 16, padding: '4px 8px', lineHeight: 1, flexShrink: 0,
-              alignSelf: 'flex-start',
-            }}>✕</button>
           </div>
 
-          <div style={{ display: 'flex', gap: 8, marginTop: 10, flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: 8, marginTop: 12, flexWrap: 'wrap', justifyContent: 'center' }}>
             {member.gender && (
               <span style={{ fontSize: 10, color: '#64748b', display: 'flex', alignItems: 'center', gap: 3 }}>
                 {member.gender === 'Female' ? '♀' : '♂'} {member.gender}
