@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from 'react';
 import * as d3 from 'd3';
-import { sectors, Sector, Member } from '../data/stakeholders';
+import { sectors, Sector, Member, ProfileLink, Publication } from '../data/stakeholders';
 import SearchOverlay from './SearchOverlay';
 
 interface NodeDatum {
@@ -245,7 +245,7 @@ export default function MindMap() {
           .attr('fill', '#a5b4fc')
           .attr('font-size', 10)
           .attr('font-weight', 500)
-          .text('50 Candidates • 5 Sectors');
+          .text('44 Candidates • 5 Sectors');
 
       } else if (node.type === 'sector') {
         const color = node.sectorColor!;
@@ -699,14 +699,80 @@ function DetailPanel({ info, onClose }: { info: SelectedInfo; onClose: () => voi
             </InfoSection>
           )}
 
+          {member.status && (
+            <InfoSection icon="✅" title="Engagement Status" color={color}>
+              <p style={{ fontSize: 12, color: '#86efac', margin: 0, lineHeight: 1.6 }}>{member.status}</p>
+            </InfoSection>
+          )}
+
           {member.notes && (
-            <InfoSection icon="📝" title="Notes / Status" color={color}>
+            <InfoSection icon="📝" title="Assessment Notes" color={color}>
               <p style={{ fontSize: 12, color: '#cbd5e1', margin: 0, lineHeight: 1.6 }}>{member.notes}</p>
             </InfoSection>
           )}
 
+          {/* Rich profile links */}
+          {member.profiles && member.profiles.length > 0 && (
+            <div style={{ marginBottom: 16 }}>
+              <div style={{ fontSize: 10, fontWeight: 700, color, textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: 8, display: 'flex', alignItems: 'center', gap: 5 }}>
+                🔗 Profiles & Online Presence
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                {member.profiles.map((p: ProfileLink, i: number) => (
+                  <a key={i} href={p.url} target="_blank" rel="noopener noreferrer"
+                    style={{
+                      display: 'flex', alignItems: 'center', gap: 8,
+                      padding: '7px 10px', borderRadius: 8,
+                      background: 'rgba(255,255,255,0.04)',
+                      border: `1px solid ${color}25`,
+                      textDecoration: 'none',
+                      transition: 'background 0.15s',
+                    }}
+                    onMouseEnter={(e) => (e.currentTarget.style.background = `${color}15`)}
+                    onMouseLeave={(e) => (e.currentTarget.style.background = 'rgba(255,255,255,0.04)')}
+                  >
+                    <span style={{ fontSize: 14, flexShrink: 0 }}>{p.icon || '🔗'}</span>
+                    <span style={{ fontSize: 11, color, fontWeight: 500, flex: 1 }}>{p.label}</span>
+                    <span style={{ fontSize: 10, color: '#475569' }}>↗</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Key publications */}
+          {member.publications && member.publications.length > 0 && (
+            <div style={{ marginBottom: 16 }}>
+              <div style={{ fontSize: 10, fontWeight: 700, color, textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: 8, display: 'flex', alignItems: 'center', gap: 5 }}>
+                📄 Key Publications
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                {member.publications.map((pub: Publication, i: number) => (
+                  <a key={i} href={pub.url} target="_blank" rel="noopener noreferrer"
+                    style={{
+                      display: 'block', padding: '8px 10px', borderRadius: 8,
+                      background: 'rgba(255,255,255,0.03)',
+                      border: '1px solid rgba(255,255,255,0.06)',
+                      textDecoration: 'none',
+                      transition: 'background 0.15s',
+                    }}
+                    onMouseEnter={(e) => (e.currentTarget.style.background = 'rgba(255,255,255,0.07)')}
+                    onMouseLeave={(e) => (e.currentTarget.style.background = 'rgba(255,255,255,0.03)')}
+                  >
+                    <div style={{ fontSize: 11, color: '#e2e8f0', lineHeight: 1.5, marginBottom: 3 }}>{pub.title}</div>
+                    <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
+                      {pub.year && <span style={{ fontSize: 9, color: color, fontWeight: 600, background: `${color}20`, padding: '1px 6px', borderRadius: 4 }}>{pub.year}</span>}
+                      {pub.journal && <span style={{ fontSize: 9, color: '#64748b', fontStyle: 'italic' }}>{pub.journal}</span>}
+                      <span style={{ fontSize: 9, color: '#475569', marginLeft: 'auto' }}>↗ Open</span>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Contact */}
-          {(member.email || member.phone || member.website) && (
+          {(member.email || member.phone || (!member.profiles && member.website)) && (
             <div style={{
               marginTop: 16, padding: '12px 14px',
               background: 'rgba(255,255,255,0.04)',
@@ -724,7 +790,7 @@ function DetailPanel({ info, onClose }: { info: SelectedInfo; onClose: () => voi
               {member.phone && (
                 <div style={{ fontSize: 11, color: '#94a3b8', marginBottom: 4 }}>📞 {member.phone}</div>
               )}
-              {member.website && member.website !== 'nan' && (
+              {!member.profiles && member.website && member.website !== 'nan' && (
                 <div style={{ fontSize: 11, color: '#94a3b8' }}>
                   🌐 <a href={`https://${member.website.replace(/^https?:\/\//, '')}`} target="_blank" rel="noopener noreferrer" style={{ color: '#818cf8', textDecoration: 'none' }}>{member.website}</a>
                 </div>

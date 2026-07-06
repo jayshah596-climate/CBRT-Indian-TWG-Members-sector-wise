@@ -1,3 +1,16 @@
+export interface ProfileLink {
+  label: string;
+  url: string;
+  icon?: string;
+}
+
+export interface Publication {
+  title: string;
+  url: string;
+  year?: string;
+  journal?: string;
+}
+
 export interface Member {
   number: string;
   name: string;
@@ -15,6 +28,10 @@ export interface Member {
   website: string;
   priority_tier: string;
   notes: string;
+  gender?: string;
+  profiles?: ProfileLink[];
+  publications?: Publication[];
+  status?: string;
 }
 
 export interface Sector {
@@ -36,201 +53,315 @@ export const sectors: Sector[] = [
     members: [
       {
         number: "1",
-        name: "Dr. S.D. Attri",
-        title: "Former Director General of Meteorology",
-        organisation: "India Meteorological Department (IMD)",
-        type: "Government / Research",
-        city: "New Delhi",
-        sector_expertise: "Agrometeorology; climate projections; extreme weather data",
-        ar_relevance: "IMD district-level crop weather data; IDF curves for agricultural water; drought and flood hazard maps for all districts — essential for setting CBRT crop production threshold data baselines",
-        key_projects: "NICRA weather data integration; District Agro-Met Advisory Services (DAMS); National Weather Services for Agriculture",
-        cbrt_twg_role: "Anchor — Data provider",
-        email: "attri@imd.gov.in",
-        phone: "011-24619943",
-        linkedin: "Search: SD Attri IMD LinkedIn",
-        website: "www.imd.gov.in",
-        priority_tier: "Tier 1 — Anchor",
-        notes: "IMD is the mandatory data source for CBRT thresholds. IMD representative essential in TWG."
+        name: "Dr Satiprasad Sahoo",
+        title: "Founder & Director",
+        organisation: "Prajukti Research Pvt Ltd; ex-ICARDA; IIT Guwahati",
+        type: "Research / Independent",
+        city: "Kolkata (Baruipur), India",
+        gender: "Male",
+        sector_expertise: "Remote sensing & GIS; groundwater hydrology; climate-resilient agriculture; drought & irrigation; hydrological modelling; machine learning for water-resource mapping",
+        ar_relevance: "100+ publications (~2,080 citations) on water/drought/irrigation/groundwater applied to climate-resilient agriculture across India and Africa. His hydroclimate impact assessments and drought-resilience frameworks directly inform CBRT Crop Production thresholds for water-use efficiency, irrigation adequacy and groundwater security.",
+        key_projects: "Prajukti Research hydro-environmental consulting; ICARDA dryland water resilience programmes; IIT Guwahati watershed research; groundwater-to-irrigation mapping (Morocco, Mahanadi basin, Sundarban); FuzzyAHP crop land-suitability modelling; co-editor Springer 'Sustainable Management of Delta Ecosystems Resilience' (2026)",
+        cbrt_twg_role: "Core technical — Water-resilience, drought & irrigation criteria",
+        email: "satispss@gmail.com",
+        phone: "",
+        linkedin: "",
+        website: "https://satispss.wixsite.com/mysite",
+        priority_tier: "Tier 1 — Core",
+        status: "Confirmed — introductory call completed; interested",
+        notes: "Excellent fit for the water-resilience, drought, irrigation, groundwater and geospatial-methods dimension of crop-production criteria. Prolific, India-focused (Mahanadi, Sundarban, eastern India), dryland water expertise from ICARDA. Lens is hydrology/geospatial rather than agronomy/breeding.",
+        profiles: [
+          { label: "Personal Website", url: "https://satispss.wixsite.com/mysite", icon: "🌐" },
+          { label: "Google Scholar (~2,080 citations)", url: "https://scholar.google.co.in/citations?user=LvYFWPcAAAAJ&hl=en", icon: "🎓" },
+          { label: "MDPI Sciprofiles", url: "https://sciprofiles.com/profile/1551135", icon: "📄" },
+          { label: "ResearchGate", url: "https://www.researchgate.net/profile/Satiprasad-Sahoo", icon: "🔬" }
+        ],
+        publications: [
+          {
+            title: "Review of climate-resilient agriculture for ensuring food security: Sustainability opportunities and challenges of India (2024)",
+            url: "https://www.sciencedirect.com/science/article/pii/S2665972724002125",
+            year: "2024",
+            journal: "Farming System (Elsevier)"
+          },
+          {
+            title: "A review of sustainable drought resilience strategies for India's diverse agroclimatic landscapes (2026)",
+            url: "https://iwaponline.com/hr/article/57/1/78/110679",
+            year: "2026",
+            journal: "Hydrology Research 57(1):78–105"
+          },
+          {
+            title: "Climate-resilient strategies for sustainable groundwater management in Mahanadi River basin of Eastern India (2025)",
+            url: "https://link.springer.com/article/10.1007/s11600-024-01466-5",
+            year: "2025",
+            journal: "Acta Geophysica"
+          },
+          {
+            title: "Hybrid framework of physics-inspired optimization and explainable ensemble learning for irrigation classification mapping in Morocco (2026)",
+            url: "https://www.researchgate.net/publication/397975454",
+            year: "2026",
+            journal: "ResearchGate"
+          },
+          {
+            title: "Impact assessment of LULC changes on groundwater resources: Piyali river sub-basin, Sundarban (2026)",
+            url: "https://link.springer.com/article/10.1007/s12517-026-12444-0",
+            year: "2026",
+            journal: "Arabian Journal of Geosciences"
+          },
+          {
+            title: "Review of aquifer storage and recovery (ASR) opportunities and challenges in India (2025)",
+            url: "https://link.springer.com/article/10.1007/s12665-025-12124-4",
+            year: "2025",
+            journal: "Environmental Earth Sciences"
+          },
+          {
+            title: "Co-editor: Sustainable Management of Delta Ecosystems Resilience (Springer, 2026)",
+            url: "https://link.springer.com/book/10.1007/978-3-032-16261-8",
+            year: "2026",
+            journal: "Springer Book"
+          }
+        ]
       },
       {
         number: "2",
-        name: "Dr. A.K. Singh",
-        title: "Director General",
-        organisation: "Indian Council of Agricultural Research (ICAR)",
-        type: "Government Research",
-        city: "New Delhi",
-        sector_expertise: "Climate-resilient crop varieties; NICRA programme; agricultural adaptation",
-        ar_relevance: "ICAR is India's apex agricultural research body. NICRA programme has assessed 573 agricultural districts for climate vulnerability. ICAR has released 2,177+ climate-resilient crop varieties. Their data directly informs CBRT Crop Production substantial contribution thresholds.",
-        key_projects: "NICRA (National Innovations in Climate Resilient Agriculture); 524 new climate-resilient varieties since Jan 2024; ICAR-IIWM water productivity benchmarks",
-        cbrt_twg_role: "Anchor — Technical lead",
-        email: "dg@icar.org.in",
-        phone: "011-25843965",
-        linkedin: "Search: AK Singh ICAR LinkedIn",
-        website: "www.icar.org.in",
-        priority_tier: "Tier 1 — Anchor",
-        notes: "ICAR DG or nominated Director (ICAR-CRIDA) should anchor Crop Production TWG."
+        name: "Tashina Madappa Cheranda",
+        title: "Senior Associate, Adaptation & Risk Analysis",
+        organisation: "CSTEP (Centre for Study of Science, Technology and Policy)",
+        type: "Think Tank / Policy Research",
+        city: "India",
+        gender: "Female",
+        sector_expertise: "Multi-hazard climate-risk & vulnerability assessment (IPCC AR5 framework); climate-smart agriculture; watershed development; rural economies; climate law & policy; state/district climate action plans",
+        ar_relevance: "Leads multi-hazard climate risk assessments (drought, heatwave, flood, sea-level rise) across agriculture, fisheries, livestock and water sectors using the IPCC AR5 hazard–exposure–vulnerability framework. MGNREGS climate co-benefits work on soil-water conservation and drought/flood resilience directly feeds into CBRT criteria on adaptation effectiveness. Also publishes as 'Tashina Esteves'.",
+        key_projects: "Climate Risk Assessment Tool (CRAT) for Puducherry UT (CSTEP-RR-2025-03); MGNREGS climate co-benefits framework; Promoting Climate-Smart Agriculture for a Resilient Odisha (CSTEP); State/district climate risk & vulnerability assessments for State Action Plans; climate-resilience capacity-building for district officials",
+        cbrt_twg_role: "Policy Specialist — Climate risk assessment, CSA & adaptation-programme design",
+        email: "",
+        phone: "",
+        linkedin: "https://www.linkedin.com/in/tashinamadappa/",
+        website: "https://cstep.in/our_team/tashina-madappa-cheranda/",
+        priority_tier: "Tier 1 — Core",
+        status: "Confirmed — introductory call scheduled 22 June 2026",
+        notes: "Useful contributor on climate-risk/vulnerability-assessment methodology, climate-smart-agriculture policy, and watershed/adaptation-programme design. Strongest for assessment-and-policy framing of crop criteria and India state-government linkages. Earlier-career (MSc); team contributor rather than senior lead.",
+        profiles: [
+          { label: "CSTEP Profile", url: "https://cstep.in/our_team/tashina-madappa-cheranda/", icon: "🏛" },
+          { label: "Google Scholar", url: "https://scholar.google.com/citations?user=px4cHMMAAAAJ", icon: "🎓" },
+          { label: "ResearchGate", url: "https://www.researchgate.net/scientific-contributions/Tashina-Madappa-Cheranda-2216249107", icon: "🔬" },
+          { label: "LinkedIn", url: "https://www.linkedin.com/in/tashinamadappa/", icon: "💼" },
+          { label: "ORCID", url: "https://orcid.org/0000-0001-7581-8956", icon: "🆔" }
+        ],
+        publications: [
+          {
+            title: "Visualising Climate Change Risks: The Climate Risk Assessment Tool (CRAT) for Puducherry UT (CSTEP-RR-2025-03)",
+            url: "https://cstep.in/publication/visualising-climate-change-risks-the-climate-risk-assessment-tool-crat-for-puducherry-ut/",
+            year: "2025",
+            journal: "CSTEP Research Report"
+          },
+          {
+            title: "Realigning Developmental Programmes for Reducing Climate Vulnerability: Case Study of MGNREGS in India",
+            url: "https://scholar.google.com/citations?user=px4cHMMAAAAJ",
+            year: "2022",
+            journal: "Book Chapter (via CSTEP / ResearchGate)"
+          },
+          {
+            title: "Promoting Climate-Smart Agriculture for a Resilient Odisha (CSTEP project report)",
+            url: "https://cstep.in/drupal/node/1665",
+            year: "2023",
+            journal: "CSTEP Policy Report"
+          },
+          {
+            title: "Reflections from a Climate Training Workshop — Ground Realities and Sectoral Insights",
+            url: "https://cstep.in/reflections-from-a-climate-training-workshop-ground-realities-and-sectoral-insights/",
+            year: "2024",
+            journal: "CSTEP Blog"
+          }
+        ]
       },
       {
         number: "3",
-        name: "Dr. Ch. Srinivasa Rao",
-        title: "Director",
-        organisation: "ICAR-Central Research Institute for Dryland Agriculture (CRIDA)",
-        type: "Government Research",
-        city: "Hyderabad",
-        sector_expertise: "Dryland agriculture; soil moisture; climate adaptation in rainfed systems",
-        ar_relevance: "ICAR-CRIDA is India's primary institution for dryland and rainfed agriculture research. Their research on climate resilience in dryland cropping directly informs CBRT thresholds for water-use efficiency and crop stress tolerance.",
-        key_projects: "NICRA rainfed component; Contingency crop planning for 600 districts; Dryland agriculture climate vulnerability assessment",
-        cbrt_twg_role: "Core technical member",
-        email: "director.crida@icar.gov.in",
-        phone: "040-24530177",
-        linkedin: "Search: Srinivasa Rao CRIDA LinkedIn",
-        website: "www.icar-crida.res.in",
+        name: "Arjuna Srinidhi",
+        title: "Senior Scientist, Futures Research",
+        organisation: "WELL Labs (formerly WOTR; PhD Wageningen University)",
+        type: "Research Institute / Think Tank",
+        city: "India",
+        gender: "Male",
+        sector_expertise: "Climate resilience assessment of semi-arid/rainfed farming systems; adaptation pathways; ecosystem-based adaptation (EbA) and NbS; farmer producer organisation (FPO) climate finance pathways; critical climate-stress moment identification; retrospective resilience assessment",
+        ar_relevance: "PhD from Wageningen on 'climate-resilient development pathways for semi-arid farming systems in India.' His peer-reviewed methods for identifying location-specific climate stresses (hazard mapping), retrospective resilience assessment frameworks, and FPO climate-finance pathways map directly onto CBRT Crop Production criteria design for hazard screening, adaptation effectiveness and the finance-to-farmer link. India-specific: Maharashtra, Karnataka dryland agriculture.",
+        key_projects: "CLARITY — Climate Adaptation and Resilience In Tropical drYlands (WELL Labs); PI 4-year EbA project Maharashtra; ECOBARI Collaborative (National Anchor); Climate-resilient FPO pathways (WOTR/Wageningen); WRI Watershed Development India; WOTR ecosystem-based adaptation programme",
+        cbrt_twg_role: "Technical lead — Semi-arid farming resilience, adaptation pathways & FPO finance criteria",
+        email: "arjuna.srinidhi@ifmr.ac.in",
+        phone: "",
+        linkedin: "https://www.linkedin.com/in/arjuna-srinidhi-37736211/",
+        website: "https://welllabs.org/arjuna-srinidhi/",
         priority_tier: "Tier 1 — Core",
-        notes: "CRIDA director is the best nominee from ICAR for crop production TWG if DG is unavailable."
+        status: "Confirmed — interest received; introductory call 1 July 2026",
+        notes: "Most directly relevant resilience-framework researcher for CBRT Crop Production criteria. Methods map onto: location-specific hazard mapping, retrospective resilience assessment, climate-resilient development pathways for FPOs. India-specific, rainfed/dryland-focused, bridges research, practice and policy. Lens is farming-systems and water/landscape rather than single-crop agronomy.",
+        profiles: [
+          { label: "WELL Labs Profile", url: "https://welllabs.org/arjuna-srinidhi/", icon: "🏛" },
+          { label: "Google Scholar", url: "https://scholar.google.com/citations?user=4Kdws-wAAAAJ&hl=en", icon: "🎓" },
+          { label: "ResearchGate", url: "https://www.researchgate.net/profile/Arjuna-Srinidhi", icon: "🔬" },
+          { label: "LinkedIn", url: "https://www.linkedin.com/in/arjuna-srinidhi-37736211/", icon: "💼" },
+          { label: "Wageningen PhD Thesis", url: "https://research.wur.nl/en/publications/advancing-climate-resilient-development-for-semi-arid-farming-sys/", icon: "📚" },
+          { label: "Adaptation Research Alliance", url: "https://www.adaptationresearchalliance.org/about-us/team/arjunasrinidhi/", icon: "🌍" }
+        ],
+        publications: [
+          {
+            title: "Critical climate-stress moments for semi-arid farming systems in India (2024)",
+            url: "https://link.springer.com/article/10.1007/s10113-024-02281-w",
+            year: "2024",
+            journal: "Regional Environmental Change 24:122"
+          },
+          {
+            title: "Climate resilient development pathways for farmer producer organizations in semi-arid India (2025)",
+            url: "https://www.tandfonline.com/doi/full/10.1080/17565529.2025.2459063",
+            year: "2025",
+            journal: "Climate and Development 17(9)"
+          },
+          {
+            title: "Retrospective climate resilience assessment of semi-arid farming systems in India (2023)",
+            url: "https://www.tandfonline.com/doi/full/10.1080/07900627.2023.2207680",
+            year: "2023",
+            journal: "International Journal of Water Resources Development"
+          },
+          {
+            title: "Top 100 questions for the sustainable intensification of agriculture in India's rainfed drylands",
+            url: "https://ouci.dntb.gov.ua/en/works/4wx5O0Zl/",
+            year: "2023",
+            journal: "Horizon-scanning study (cross-disciplinary)"
+          },
+          {
+            title: "Watershed Development in India: Economic Valuation and Adaptation Considerations (WRI Working Paper)",
+            url: "https://www.wri.org/research/watershed-development-india-economic-valuation-and-adaptation-considerations",
+            year: "2013",
+            journal: "World Resources Institute"
+          },
+          {
+            title: "Climate Pathways for FPOs in India (WELL Labs project)",
+            url: "https://welllabs.org/climate-pathways-fpos-india/",
+            year: "2024",
+            journal: "WELL Labs"
+          }
+        ]
       },
       {
         number: "4",
-        name: "Dr. P.K. Aggarwal",
-        title: "ICAR (retired); current CGIAR CCAFS advisor",
-        organisation: "CGIAR / ICAR (retired)",
-        type: "International Research",
-        city: "New Delhi",
-        sector_expertise: "Crop modelling; climate impact on agriculture; CGIAR CCAFS India programmes",
-        ar_relevance: "Former ICAR DG and pioneer of crop-climate modelling in India. His work on crop yield projections under climate scenarios is foundational for CBRT crop production threshold data.",
-        key_projects: "CCAFS India programmes; DSSAT crop model calibration for India; South Asian food security modelling",
-        cbrt_twg_role: "Technical expert / Advisory",
-        email: "p.aggarwal@cgiar.org",
+        name: "Dr Ranjitha Puskur",
+        title: "Principal Scientist; Gender and Livelihoods Research Leader; CGIAR GENDER Evidence Module Leader",
+        organisation: "International Rice Research Institute (IRRI) / CGIAR GENDER Impact Platform",
+        type: "International Research Institute / CGIAR",
+        city: "New Delhi, India",
+        gender: "Female",
+        sector_expertise: "Gender-responsive climate-smart agriculture; women's climate resilience; systematic evidence synthesis; agricultural innovation systems; gender × social-inclusion × crop-systems intersection; pro-poor and pro-women outcomes across South and Southeast Asia",
+        ar_relevance: "Leads the CGIAR GENDER Evidence Module synthesising what works for gender-equitable, climate-resilient agri-food systems. The Campbell Systematic Review on climate-smart agriculture for women farmers (2024) directly informs gender-responsive CBRT Crop Production criteria and safeguards. West Bengal 'Learning Labs' training women farmer leaders for climate-resilient farming (India-specific). Previously led CGIAR Research Program on Aquatic Agricultural Systems and WorldFish gender strategy.",
+        key_projects: "CGIAR GENDER Impact Platform — Evidence Module lead; IRRI Gender & Livelihoods Research Program; CGIAR GENDER Accelerator (West Bengal Learning Labs, North & South 24 Parganas, 2025); gender-responsive climate/nutrition-smart rice systems; gendered trait preferences for breeding; gender-responsive extension in South/Southeast Asia",
+        cbrt_twg_role: "Gender & equity specialist — gender-responsive criteria, safeguards & CSA evidence synthesis",
+        email: "r.puskur@irri.org",
         phone: "",
-        linkedin: "Search: PK Aggarwal CGIAR LinkedIn",
-        website: "www.cgiar.org",
+        linkedin: "https://in.linkedin.com/in/ranjitha-puskur",
+        website: "https://www.irri.org/about-us/our-people/ranjitha-puskur",
         priority_tier: "Tier 2 — Technical",
-        notes: "Senior technical advisor — valuable for peer review of threshold methodology."
+        status: "Confirmed — interest received; introductory call 7 July 2026",
+        notes: "Strongest, most citable contribution: Campbell systematic review on CSA for women farmers, and West Bengal climate-resilient-farming / women-leaders work. Best fit for gender-responsive, socially-inclusive adaptation criteria and evidence synthesis for rice/crop systems. Not crop agronomy or breeding — gender and livelihoods lens.",
+        profiles: [
+          { label: "IRRI Profile", url: "https://www.irri.org/about-us/our-people/ranjitha-puskur", icon: "🏛" },
+          { label: "CGIAR GENDER Platform", url: "https://gender.cgiar.org/experts/ranjitha-puskur", icon: "🌍" },
+          { label: "ResearchGate", url: "https://www.researchgate.net/profile/Ranjitha-Puskur", icon: "🔬" },
+          { label: "LinkedIn", url: "https://in.linkedin.com/in/ranjitha-puskur", icon: "💼" },
+          { label: "CGSpace Publications", url: "https://cgspace.cgiar.org/search?query=puskur+ranjitha", icon: "📚" }
+        ],
+        publications: [
+          {
+            title: "Interventions promoting resilience through climate-smart agricultural practices for women farmers: A systematic review (2024)",
+            url: "https://onlinelibrary.wiley.com/doi/10.1002/cl2.1426",
+            year: "2024",
+            journal: "Campbell Systematic Reviews"
+          },
+          {
+            title: "Protocol: Interventions promoting resilience through CSA for women farmers (2022)",
+            url: "https://onlinelibrary.wiley.com/doi/10.1002/cl2.1274",
+            year: "2022",
+            journal: "Campbell Systematic Reviews"
+          },
+          {
+            title: "What influences women's participation in water governance? Learning from polder zones of Bangladesh (2025)",
+            url: "https://www.tandfonline.com/journals/rgtd20",
+            year: "2025",
+            journal: "Gender, Technology and Development"
+          },
+          {
+            title: "Bundling agri-food systems innovations for women's resilience and empowerment: Building the evidence base (2023)",
+            url: "https://www.researchgate.net/publication/375766890",
+            year: "2023",
+            journal: "IIED Shaping Sustainable Markets Group"
+          },
+          {
+            title: "Realizing Women's Potential in Agri-Food Systems (2024)",
+            url: "https://cgspace.cgiar.org/items/cb9dbfa8-b99c-4351-b3d9-c203e6c8cb2e",
+            year: "2024",
+            journal: "CGIAR GENDER Impact Platform"
+          },
+          {
+            title: "Enabling women farmers in Odisha to combat heat stress (CGIAR, 2025)",
+            url: "https://www.cgiar.org/news-events/news/enabling-women-farmers-in-odisha-to-combat-heat-stress",
+            year: "2025",
+            journal: "CGIAR News"
+          },
+          {
+            title: "Social and Gender Equity and Rice Agri-Food Systems Transformation — 6th International Rice Congress 2023",
+            url: "https://www.irri.org/news-and-events/news/social-gender-equity-and-rice-agri-food-systems-transformation-catalysing",
+            year: "2023",
+            journal: "IRRI / International Rice Congress"
+          }
+        ]
       },
       {
         number: "5",
-        name: "Gagan Sidhu",
-        title: "Senior Programme Lead",
-        organisation: "CEEW (Council on Energy, Environment and Water)",
-        type: "Think Tank",
-        city: "New Delhi",
-        sector_expertise: "Agricultural finance; climate adaptation finance; PMFBY crop insurance; NABARD green finance",
-        ar_relevance: "CEEW is CBI's confirmed India IWG partner. Gagan Sidhu links the Crop Production TWG to the finance community — essential for connecting CBRT criteria to NABARD, PMFBY, and agricultural bond issuers.",
-        key_projects: "CEEW agriculture climate finance study; PMFBY analysis; NABARD green bond advisory",
-        cbrt_twg_role: "Finance bridge — India IWG link",
-        email: "gagan.sidhu@ceew.in",
-        phone: "011-40733300",
-        linkedin: "Search: Gagan Sidhu CEEW LinkedIn",
-        website: "www.ceew.in",
-        priority_tier: "Tier 1 — Core",
-        notes: "CEEW confirmed India IWG partner. Essential TWG-IWG bridge."
-      },
-      {
-        number: "6",
-        name: "Dr. Siraj Wajid",
-        title: "Senior Researcher",
-        organisation: "International Water Management Institute (IWMI) — India",
-        type: "International Research",
-        city: "New Delhi",
-        sector_expertise: "Agricultural water management; irrigation efficiency; crop water productivity",
-        ar_relevance: "IWMI's water productivity benchmarks for Indian crops are directly relevant to CBRT Crop Production thresholds on irrigation water use efficiency. Their GAEZ-India water stress data informs water use criteria.",
-        key_projects: "IWMI India water productivity study; crop water use efficiency benchmarks; groundwater depletion analysis for Indian agriculture",
-        cbrt_twg_role: "Data and threshold expert",
-        email: "s.wajid@cgiar.org",
+        name: "Dr Muzna Alvi",
+        title: "Research Fellow, Natural Resources & Resilience (NRR)",
+        organisation: "IFPRI (International Food Policy Research Institute) — New Delhi",
+        type: "International Research Institute / CGIAR",
+        city: "New Delhi, India",
+        gender: "Female",
+        sector_expertise: "Climate adaptation & climate-smart agriculture (India/South Asia); digital/climate advisory services; gender & social identity in agriculture; collective action; women's empowerment (WEAI/pro-WEAI); India Climate Finance Taxonomy — agriculture sectoral group member; smallholder-inclusive criteria design",
+        ar_relevance: "Sits on the agriculture sectoral group of India's Climate Finance Taxonomy (DEA/MoF, released May 2025) — uniquely valuable for CBRT–India taxonomy interoperability, adaptation-finance eligibility logic and smallholder-inclusive criteria design. Her CSA/gender research (Agricultural Systems 2023; CGIAR Climate Action grant 2026 on AI climate-advisory services) provides the social-inclusion evidence base for CBRT Crop Production criteria. Also publishes as 'Muzna Fatima Alvi' / 'Muzna Fatima'.",
+        key_projects: "CGIAR Climate Action grant (2026): 'Climate Information and Women's Empowerment — Digital Advisory Services for Informal Women Workers in India' (Gujarat; 1,500 women; SEWA/Gram Vaani); CGIAR Multifunctional Landscapes Program (resilient agricultural landscapes); Government of Odisha–IFPRI Gender Responsive Cell (Dec 2025); IFPRI NRR climate adaptation and CSA research",
+        cbrt_twg_role: "Finance & taxonomy specialist — India Climate Finance Taxonomy (agriculture), CSA policy & smallholder-inclusive criteria",
+        email: "m.alvi@cgiar.org",
         phone: "",
-        linkedin: "Search: Siraj Wajid IWMI LinkedIn",
-        website: "www.iwmi.cgiar.org",
-        priority_tier: "Tier 2 — Technical",
-        notes: "Valuable for crop water use criteria — IWMI India office representative."
-      },
-      {
-        number: "7",
-        name: "S.D. Rohilla",
-        title: "Chief General Manager, DCAS",
-        organisation: "NABARD (National Bank for Agriculture and Rural Development)",
-        type: "DFI / Finance",
-        city: "Mumbai",
-        sector_expertise: "Agricultural finance; climate adaptation finance; Adaptation Fund; NAFCC programme",
-        ar_relevance: "NABARD is India's apex agricultural development finance institution. NABARD manages the National Adaptation Fund for Climate Change (NAFCC) and the Micro Irrigation Fund (MIF). Their green bond issuance and agricultural credit criteria are the primary CBRT finance instrument pathway.",
-        key_projects: "MIF (Micro Irrigation Fund — ₹5,000 crore); NAFCC; Adaptation Fund India; NABARD green bonds",
-        cbrt_twg_role: "Anchor — Finance and implementation",
-        email: "sd.rohilla@nabard.org",
-        phone: "022-26539350",
-        linkedin: "Search: SD Rohilla NABARD LinkedIn",
-        website: "www.nabard.org",
-        priority_tier: "Tier 1 — Anchor",
-        notes: "NABARD is the critical DFI anchor for Crop Production TWG. S.D. Rohilla is the confirmed NABARD-DCAS contact."
-      },
-      {
-        number: "8",
-        name: "Dr. V.K. Singh",
-        title: "Director",
-        organisation: "ICAR-Indian Institute of Wheat and Barley Research (IIWBR)",
-        type: "Government Research",
-        city: "Karnal",
-        sector_expertise: "Wheat heat stress; climate resilience of wheat varieties; heat escape strategies",
-        ar_relevance: "Wheat is India's most important CBRT crop production crop for heat stress criteria. ICAR-IIWBR's heat tolerance data and heat-escape variety research directly inform CBRT wheat variety threshold criteria.",
-        key_projects: "Heat-tolerant wheat varieties (HD 3086, HD 3385); terminal heat stress protocols; NICRA wheat component",
-        cbrt_twg_role: "Sector specialist",
-        email: "director.iiwbr@icar.gov.in",
-        phone: "0184-2267198",
-        linkedin: "Search: VK Singh IIWBR LinkedIn",
-        website: "www.icar-iiwbr.res.in",
-        priority_tier: "Tier 2 — Technical",
-        notes: "Wheat heat stress expert — critical for India crop production criteria given wheat's economic importance."
-      },
-      {
-        number: "9",
-        name: "Dr. Anil Rai",
-        title: "Director",
-        organisation: "ICAR-Indian Agricultural Statistics Research Institute (IASRI)",
-        type: "Government Research",
-        city: "New Delhi",
-        sector_expertise: "Agricultural statistics; crop yield modelling; climate data analytics",
-        ar_relevance: "IASRI provides the statistical and modelling framework used to verify CBRT crop production thresholds against India's agricultural datasets. Their crop simulation models calibrated with IMD data are the primary evidence base for yield benchmarks.",
-        key_projects: "IASRI crop yield models; FASAL (Forecasting Agricultural output using Space, Agro-meteorology and Land based observations); agricultural data integration",
-        cbrt_twg_role: "Data and modelling",
-        email: "director.iasri@icar.gov.in",
-        phone: "011-25841294",
-        linkedin: "Search: Anil Rai IASRI LinkedIn",
-        website: "www.iasri.res.in",
-        priority_tier: "Tier 2 — Advisory",
-        notes: "Statistical validation expert for crop production threshold evidence base."
-      },
-      {
-        number: "10",
-        name: "Dr. Balasubramanian Ramakrishnan",
-        title: "Principal Scientist",
-        organisation: "ICAR-National Bureau of Soil Survey and Land Use Planning (NBSS&LUP)",
-        type: "Government Research",
-        city: "Nagpur",
-        sector_expertise: "Soil carbon; land degradation; climate impacts on soil fertility",
-        ar_relevance: "CBRT Crop Production criteria include soil carbon sequestration and DNSH soil criteria. NBSS&LUP's soil carbon baseline data for Indian agricultural land is essential for setting these thresholds.",
-        key_projects: "India soil organic carbon mapping; Land degradation neutrality assessment; Soil health card scheme data",
-        cbrt_twg_role: "Soil and carbon threshold expert",
-        email: "director.nbsslup@icar.gov.in",
-        phone: "0712-2500518",
-        linkedin: "Search: Balasubramanian NBSSLUP LinkedIn",
-        website: "www.icar-nbsslup.res.in",
-        priority_tier: "Tier 2 — Technical",
-        notes: "Soil carbon expertise — needed for DNSH criteria development in Crop Production."
-      },
-      {
-        number: "11",
-        name: "Arabinda Kumar Padhee",
-        title: "Country Director",
-        organisation: "International Fund for Agricultural Development (IFAD)",
-        type: "International Development",
-        city: "New Delhi",
-        sector_expertise: "Smallholder climate finance; rural livelihoods; IFAD India programmes",
-        ar_relevance: "IFAD provides a lens on smallholder inclusion and equity in CBRT Crop Production criteria — ensuring thresholds do not exclude small and marginal farmers who manage 86% of India's agricultural holdings.",
-        key_projects: "IFAD India country programme; smallholder climate adaptation finance; rural women's climate resilience",
-        cbrt_twg_role: "Smallholder and equity lens",
-        email: "a.padhee@ifad.org",
-        phone: "011-24690410",
-        linkedin: "Search: Arabinda Padhee IFAD LinkedIn",
-        website: "www.ifad.org",
-        priority_tier: "Tier 2 — Advisory",
-        notes: "Important equity check — CBRT criteria must be applicable for small and marginal farmer finance instruments."
+        linkedin: "https://in.linkedin.com/in/muznafatima",
+        website: "https://www.ifpri.org/profile/muzna-alvi/",
+        priority_tier: "Tier 1 — Core",
+        status: "Confirmed — agreed to participate; invitation sent 18 June 2026",
+        notes: "High-value fit: brings climate-smart-agriculture and adaptation expertise, India focus, gender/social-inclusion depth, and (uniquely) hands-on experience with India's national Climate Finance Taxonomy process for agriculture. Lens is socio-economic/policy rather than crop agronomy. Mid-career Research Fellow — credible given IFPRI's role.",
+        profiles: [
+          { label: "IFPRI Profile", url: "https://www.ifpri.org/profile/muzna-alvi/", icon: "🏛" },
+          { label: "Google Scholar", url: "https://scholar.google.com/citations?user=30hZ7iAAAAAJ&hl=en", icon: "🎓" },
+          { label: "CGIAR GENDER Platform", url: "https://gender.cgiar.org/experts/muzna-alvi", icon: "🌍" },
+          { label: "LinkedIn", url: "https://in.linkedin.com/in/muznafatima", icon: "💼" }
+        ],
+        publications: [
+          {
+            title: "Gender, agriculture policies, and climate-smart agriculture in India (2023)",
+            url: "https://www.sciencedirect.com/science/article/pii/S0308521X23001567",
+            year: "2023",
+            journal: "Agricultural Systems"
+          },
+          {
+            title: "CGIAR Climate Action Grant: Climate Information and Women's Empowerment — Digital Advisory Services (2026)",
+            url: "https://www.cgiar.org/news-events/news/cgiar-climate-action-awards-six-research-grants-deepen-research-gesi-across",
+            year: "2026",
+            journal: "CGIAR Climate Action"
+          },
+          {
+            title: "Centring Women in Climate-Resilient Farming — Odisha–IFPRI Gender Responsive Cell (Mongabay, 2026)",
+            url: "https://india.mongabay.com/2026/01/centring-women-in-climate-resilient-farming/",
+            year: "2026",
+            journal: "Mongabay India"
+          },
+          {
+            title: "IFPRI NRR Natural Resources & Resilience Unit research portfolio",
+            url: "https://www.ifpri.org/profile/muzna-alvi/#:~:text=Muzna%20Alvi%20is%20a%20Research,climate%20resilience%2C%20and%20agriculture%20policies.",
+            year: "2023–2026",
+            journal: "IFPRI"
+          }
+        ]
       }
     ]
   },
