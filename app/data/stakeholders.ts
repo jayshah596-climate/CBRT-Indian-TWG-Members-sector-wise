@@ -29,6 +29,7 @@ export interface Member {
   priority_tier: string;
   notes: string;
   gender?: string;
+  photo?: string;
   profiles?: ProfileLink[];
   publications?: Publication[];
   status?: string;
@@ -59,6 +60,7 @@ export const sectors: Sector[] = [
         type: "Research / Independent",
         city: "Kolkata (Baruipur), India",
         gender: "Male",
+        photo: "/members/sahoo.jpg",
         sector_expertise: "Remote sensing & GIS; groundwater hydrology; climate-resilient agriculture; drought & irrigation; hydrological modelling; machine learning for water-resource mapping",
         ar_relevance: "100+ publications (~2,080 citations) on water/drought/irrigation/groundwater applied to climate-resilient agriculture across India and Africa. His hydroclimate impact assessments and drought-resilience frameworks directly inform CBRT Crop Production thresholds for water-use efficiency, irrigation adequacy and groundwater security.",
         key_projects: "Prajukti Research hydro-environmental consulting; ICARDA dryland water resilience programmes; IIT Guwahati watershed research; groundwater-to-irrigation mapping (Morocco, Mahanadi basin, Sundarban); FuzzyAHP crop land-suitability modelling; co-editor Springer 'Sustainable Management of Delta Ecosystems Resilience' (2026)",
@@ -129,6 +131,7 @@ export const sectors: Sector[] = [
         type: "Think Tank / Policy Research",
         city: "India",
         gender: "Female",
+        photo: "/members/cheranda.jpg",
         sector_expertise: "Multi-hazard climate-risk & vulnerability assessment (IPCC AR5 framework); climate-smart agriculture; watershed development; rural economies; climate law & policy; state/district climate action plans",
         ar_relevance: "Leads multi-hazard climate risk assessments (drought, heatwave, flood, sea-level rise) across agriculture, fisheries, livestock and water sectors using the IPCC AR5 hazard–exposure–vulnerability framework. MGNREGS climate co-benefits work on soil-water conservation and drought/flood resilience directly feeds into CBRT criteria on adaptation effectiveness. Also publishes as 'Tashina Esteves'.",
         key_projects: "Climate Risk Assessment Tool (CRAT) for Puducherry UT (CSTEP-RR-2025-03); MGNREGS climate co-benefits framework; Promoting Climate-Smart Agriculture for a Resilient Odisha (CSTEP); State/district climate risk & vulnerability assessments for State Action Plans; climate-resilience capacity-building for district officials",
@@ -182,6 +185,7 @@ export const sectors: Sector[] = [
         type: "Research Institute / Think Tank",
         city: "India",
         gender: "Male",
+        photo: "/members/srinidhi.jpg",
         sector_expertise: "Climate resilience assessment of semi-arid/rainfed farming systems; adaptation pathways; ecosystem-based adaptation (EbA) and NbS; farmer producer organisation (FPO) climate finance pathways; critical climate-stress moment identification; retrospective resilience assessment",
         ar_relevance: "PhD from Wageningen on 'climate-resilient development pathways for semi-arid farming systems in India.' His peer-reviewed methods for identifying location-specific climate stresses (hazard mapping), retrospective resilience assessment frameworks, and FPO climate-finance pathways map directly onto CBRT Crop Production criteria design for hazard screening, adaptation effectiveness and the finance-to-farmer link. India-specific: Maharashtra, Karnataka dryland agriculture.",
         key_projects: "CLARITY — Climate Adaptation and Resilience In Tropical drYlands (WELL Labs); PI 4-year EbA project Maharashtra; ECOBARI Collaborative (National Anchor); Climate-resilient FPO pathways (WOTR/Wageningen); WRI Watershed Development India; WOTR ecosystem-based adaptation programme",
@@ -248,6 +252,7 @@ export const sectors: Sector[] = [
         type: "International Research Institute / CGIAR",
         city: "New Delhi, India",
         gender: "Female",
+        photo: "/members/puskur.jpg",
         sector_expertise: "Gender-responsive climate-smart agriculture; women's climate resilience; systematic evidence synthesis; agricultural innovation systems; gender × social-inclusion × crop-systems intersection; pro-poor and pro-women outcomes across South and Southeast Asia",
         ar_relevance: "Leads the CGIAR GENDER Evidence Module synthesising what works for gender-equitable, climate-resilient agri-food systems. The Campbell Systematic Review on climate-smart agriculture for women farmers (2024) directly informs gender-responsive CBRT Crop Production criteria and safeguards. West Bengal 'Learning Labs' training women farmer leaders for climate-resilient farming (India-specific). Previously led CGIAR Research Program on Aquatic Agricultural Systems and WorldFish gender strategy.",
         key_projects: "CGIAR GENDER Impact Platform — Evidence Module lead; IRRI Gender & Livelihoods Research Program; CGIAR GENDER Accelerator (West Bengal Learning Labs, North & South 24 Parganas, 2025); gender-responsive climate/nutrition-smart rice systems; gendered trait preferences for breeding; gender-responsive extension in South/Southeast Asia",
@@ -319,6 +324,7 @@ export const sectors: Sector[] = [
         type: "International Research Institute / CGIAR",
         city: "New Delhi, India",
         gender: "Female",
+        photo: "/members/alvi.jpg",
         sector_expertise: "Climate adaptation & climate-smart agriculture (India/South Asia); digital/climate advisory services; gender & social identity in agriculture; collective action; women's empowerment (WEAI/pro-WEAI); India Climate Finance Taxonomy — agriculture sectoral group member; smallholder-inclusive criteria design",
         ar_relevance: "Sits on the agriculture sectoral group of India's Climate Finance Taxonomy (DEA/MoF, released May 2025) — uniquely valuable for CBRT–India taxonomy interoperability, adaptation-finance eligibility logic and smallholder-inclusive criteria design. Her CSA/gender research (Agricultural Systems 2023; CGIAR Climate Action grant 2026 on AI climate-advisory services) provides the social-inclusion evidence base for CBRT Crop Production criteria. Also publishes as 'Muzna Fatima Alvi' / 'Muzna Fatima'.",
         key_projects: "CGIAR Climate Action grant (2026): 'Climate Information and Women's Empowerment — Digital Advisory Services for Informal Women Workers in India' (Gujarat; 1,500 women; SEWA/Gram Vaani); CGIAR Multifunctional Landscapes Program (resilient agricultural landscapes); Government of Odisha–IFPRI Gender Responsive Cell (Dec 2025); IFPRI NRR climate adaptation and CSA research",

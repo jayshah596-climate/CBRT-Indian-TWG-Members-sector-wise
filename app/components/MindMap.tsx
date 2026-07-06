@@ -330,10 +330,11 @@ export default function MindMap() {
         const anchor = isAnchor(tier);
         const core = isCore(tier);
         const r = anchor ? 22 : core ? 17 : 13;
-        const fillColor = anchor ? color : core ? '#1e293b' : '#0f172a';
         const strokeColor = color;
         const strokeW = anchor ? 2.5 : core ? 2 : 1.5;
         const strokeOp = anchor ? 1 : core ? 0.8 : 0.5;
+        const hasPhoto = !!(node.member?.photo);
+        const clipId = `clip-${node.id}`;
 
         if (anchor) {
           ng.append('circle')
@@ -345,20 +346,62 @@ export default function MindMap() {
             .attr('stroke-opacity', 0.3);
         }
 
-        ng.append('circle')
-          .attr('r', r)
-          .attr('fill', fillColor)
-          .attr('fill-opacity', anchor ? 0.3 : 1)
-          .attr('stroke', strokeColor)
-          .attr('stroke-width', strokeW)
-          .attr('stroke-opacity', strokeOp);
+        if (hasPhoto) {
+          // Define clip path for circular photo
+          defs.append('clipPath')
+            .attr('id', clipId)
+            .append('circle')
+            .attr('r', r - 0.5);
 
-        if (anchor) {
+          // Background circle
+          ng.append('circle')
+            .attr('r', r)
+            .attr('fill', '#1e293b')
+            .attr('stroke', strokeColor)
+            .attr('stroke-width', strokeW)
+            .attr('stroke-opacity', strokeOp);
+
+          // Photo image clipped to circle
+          ng.append('image')
+            .attr('href', node.member!.photo!)
+            .attr('x', -r)
+            .attr('y', -r)
+            .attr('width', r * 2)
+            .attr('height', r * 2)
+            .attr('clip-path', `url(#${clipId})`)
+            .attr('preserveAspectRatio', 'xMidYMin slice');
+        } else {
+          ng.append('circle')
+            .attr('r', r)
+            .attr('fill', anchor ? color : core ? '#1e293b' : '#0f172a')
+            .attr('fill-opacity', anchor ? 0.3 : 1)
+            .attr('stroke', strokeColor)
+            .attr('stroke-width', strokeW)
+            .attr('stroke-opacity', strokeOp);
+
+          if (anchor) {
+            ng.append('text')
+              .attr('text-anchor', 'middle')
+              .attr('dominant-baseline', 'middle')
+              .attr('font-size', 10)
+              .attr('fill', color)
+              .text('⚓');
+          }
+        }
+
+        // Anchor badge overlay (on top of photo)
+        if (hasPhoto && anchor) {
+          ng.append('circle')
+            .attr('cx', r - 4).attr('cy', r - 4)
+            .attr('r', 6)
+            .attr('fill', '#1e293b')
+            .attr('stroke', color)
+            .attr('stroke-width', 1);
           ng.append('text')
+            .attr('x', r - 4).attr('y', r - 4)
             .attr('text-anchor', 'middle')
             .attr('dominant-baseline', 'middle')
-            .attr('font-size', 10)
-            .attr('fill', color)
+            .attr('font-size', 7)
             .text('⚓');
         }
 
@@ -618,9 +661,12 @@ function DetailPanel({ info, onClose }: { info: SelectedInfo; onClose: () => voi
           background: `linear-gradient(135deg, ${color}15, transparent)`,
           flexShrink: 0,
         }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-            <div style={{ flex: 1, paddingRight: 12 }}>
-              <div style={{ display: 'flex', gap: 6, marginBottom: 8, flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12 }}>
+            {/* Photo avatar */}
+            <MemberAvatar member={member} color={color} size={68} />
+
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div style={{ display: 'flex', gap: 6, marginBottom: 6, flexWrap: 'wrap', alignItems: 'center' }}>
                 {sector && (
                   <span style={{
                     fontSize: 9, padding: '2px 8px', borderRadius: 10,
@@ -645,23 +691,29 @@ function DetailPanel({ info, onClose }: { info: SelectedInfo; onClose: () => voi
                   }}>⚓ Anchor</span>
                 )}
               </div>
-              <div style={{ fontSize: 16, fontWeight: 800, color: '#f1f5f9', lineHeight: 1.3, marginBottom: 4 }}>
+              <div style={{ fontSize: 15, fontWeight: 800, color: '#f1f5f9', lineHeight: 1.3, marginBottom: 3 }}>
                 {member.name}
               </div>
-              <div style={{ fontSize: 11, color: '#94a3b8', lineHeight: 1.4, marginBottom: 4 }}>
+              <div style={{ fontSize: 11, color: '#94a3b8', lineHeight: 1.4, marginBottom: 3 }}>
                 {member.title}
               </div>
-              <div style={{ fontSize: 11, color: color, fontWeight: 600 }}>
+              <div style={{ fontSize: 11, color, fontWeight: 600, lineHeight: 1.3 }}>
                 {member.organisation}
               </div>
             </div>
             <button onClick={onClose} style={{
               background: 'rgba(255,255,255,0.06)', border: 'none', borderRadius: 6,
               color: '#94a3b8', cursor: 'pointer', fontSize: 16, padding: '4px 8px', lineHeight: 1, flexShrink: 0,
+              alignSelf: 'flex-start',
             }}>✕</button>
           </div>
 
-          <div style={{ display: 'flex', gap: 8, marginTop: 12, flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: 8, marginTop: 10, flexWrap: 'wrap' }}>
+            {member.gender && (
+              <span style={{ fontSize: 10, color: '#64748b', display: 'flex', alignItems: 'center', gap: 3 }}>
+                {member.gender === 'Female' ? '♀' : '♂'} {member.gender}
+              </span>
+            )}
             {member.city && (
               <span style={{ fontSize: 10, color: '#64748b', display: 'flex', alignItems: 'center', gap: 3 }}>
                 📍 {member.city}
@@ -805,6 +857,48 @@ function DetailPanel({ info, onClose }: { info: SelectedInfo; onClose: () => voi
   return null;
 }
 
+function MemberAvatar({ member, color, size = 40 }: { member: Member; color: string; size?: number }) {
+  const [imgError, setImgError] = useState(false);
+  const initials = member.name
+    .replace(/^Dr\s+|^Mr\s+|^Ms\s+/i, '')
+    .split(' ')
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((w) => w[0].toUpperCase())
+    .join('');
+
+  if (member.photo && !imgError) {
+    return (
+      <div style={{
+        width: size, height: size, borderRadius: '50%', flexShrink: 0,
+        overflow: 'hidden',
+        border: `2.5px solid ${color}`,
+        boxShadow: `0 0 0 2px ${color}30`,
+      }}>
+        <img
+          src={member.photo}
+          alt={member.name}
+          onError={() => setImgError(true)}
+          style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }}
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div style={{
+      width: size, height: size, borderRadius: '50%', flexShrink: 0,
+      background: `linear-gradient(135deg, ${color}30, ${color}15)`,
+      border: `2px solid ${color}60`,
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      fontSize: size * 0.3, fontWeight: 700, color,
+      letterSpacing: '-0.5px',
+    }}>
+      {initials}
+    </div>
+  );
+}
+
 function MemberListItem({ member, sector }: { member: Member; sector: Sector }) {
   const [expanded, setExpanded] = useState(false);
   const anchor = isAnchor(member.priority_tier);
@@ -826,14 +920,15 @@ function MemberListItem({ member, sector }: { member: Member; sector: Sector }) 
       onMouseLeave={(e) => { if (!expanded) (e.currentTarget as HTMLDivElement).style.background = 'transparent'; }}
     >
       <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
-        <div style={{
-          width: 28, height: 28, borderRadius: '50%', flexShrink: 0,
-          background: anchor ? `${sector.color}30` : 'rgba(255,255,255,0.06)',
-          border: `2px solid ${anchor ? sector.color : 'rgba(255,255,255,0.1)'}`,
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          fontSize: 11, color: sector.color,
-        }}>
-          {anchor ? '⚓' : core ? '●' : '○'}
+        <div style={{ position: 'relative', flexShrink: 0 }}>
+          <MemberAvatar member={member} color={sector.color} size={34} />
+          {anchor && (
+            <span style={{
+              position: 'absolute', bottom: -2, right: -2,
+              fontSize: 9, background: '#1e293b', borderRadius: '50%',
+              lineHeight: 1, padding: 1,
+            }}>⚓</span>
+          )}
         </div>
         <div style={{ flex: 1, minWidth: 0 }}>
           <div style={{ fontSize: 12, fontWeight: 600, color: '#e2e8f0', lineHeight: 1.3 }}>{member.name}</div>
