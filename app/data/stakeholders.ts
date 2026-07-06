@@ -396,7 +396,7 @@ export const sectors: Sector[] = [
         priority_tier: "Tier 1 — Anchor",
         notes: "Strong technical expert for heat stress, livestock adaptation and climate-resilient small ruminant systems. Confirmed member — introductory call 30 June 2026.",
         gender: "Male",
-        photo: "/members/sejian.jpg",
+        photo: "/members/sejian.jpg.png",
         status: "Confirmed — introductory call 30 June 2026",
         profiles: [
           { label: "NIANP Profile", url: "https://nianp.irins.org/profile/61806", icon: "🏛" },
@@ -454,7 +454,7 @@ export const sectors: Sector[] = [
         priority_tier: "Tier 2 — Core",
         notes: "Strong specialist for resilient livestock systems in difficult agro-ecologies. Published on mithun health, integrated hill farming systems, and indigenous livestock disease issues. Introductory call scheduled 6 July 2026.",
         gender: "Male",
-        photo: "/members/borkotoky.jpg",
+        photo: "/members/borkotoky.jpg.png",
         status: "Interest confirmed — introductory call 6 July 2026",
         profiles: [
           { label: "Google Scholar", url: "https://scholar.google.com/citations?user=Tbu32sMAAAAJ&hl=en", icon: "🎓" },
