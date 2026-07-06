@@ -4,9 +4,9 @@ Place the 5 JPEG headshot files here with **exactly** these filenames:
 
 | Filename | Member |
 |----------|--------|
-| `sahoo.jpg` | Dr Satiprasad Sahoo — Prajukti Research |
+| `srinidhi.jpg` | Dr Satiprasad Sahoo — Prajukti Research (man with glasses, striped shirt) |
+| `sahoo.jpg` | Dr. Arjuna Srinidhi — WELL Labs (young man, black/red jacket) |
 | `cheranda.jpg` | Tashina Madappa Cheranda — CSTEP |
-| `srinidhi.jpg` | Arjuna Srinidhi — WELL Labs |
 | `puskur.jpg` | Dr Ranjitha Puskur — IRRI |
 | `alvi.jpg` | Dr Muzna Alvi — IFPRI |
 
