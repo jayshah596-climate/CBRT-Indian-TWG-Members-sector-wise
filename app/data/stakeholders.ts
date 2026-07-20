@@ -499,7 +499,7 @@ export const sectors: Sector[] = [
         priority_tier: "Tier 1 — Core",
         notes: "Strongest livestock-resilience crossover profile in the list. 20+ years across FES, WOTR, LIFE Network, and Wageningen-linked research. Internal approval process going on; shown interest in principle.",
         gender: "Female",
-        photo: "/members/bhavana.jpg",
+        photo: "/members/Dr. Bhavana Rao Kuchimanchi..jpg",
         status: "Internal approval process going on; shown interest in principle — Teams meeting 08/07/2026",
         profiles: [
           { label: "LinkedIn", url: "https://www.linkedin.com/in/bhavana-rao-kuchimanchi-ph-d-4a58ab4", icon: "💼" },
@@ -540,7 +540,7 @@ export const sectors: Sector[] = [
         priority_tier: "Tier 2 — Core",
         notes: "Strong specialist for resilient grazing, pastoralism, and small-ruminant criteria. Faculty since 2017 with active publication record. Internal approval process going on; shown interest in principle.",
         gender: "Male",
-        photo: "/members/ankaj.jpg",
+        photo: "/members/Dr. Ankaj Thakur.jpg",
         status: "Internal approval process going on; shown interest in principle — Teams meeting",
         profiles: [
           { label: "Google Scholar", url: "https://scholar.google.com/citations?user=amGm5KYAAAAJ&hl=en", icon: "🎓" },
@@ -586,7 +586,7 @@ export const sectors: Sector[] = [
         priority_tier: "Tier 1 — Anchor",
         notes: "India's leading livestock-climate economist. Expertise in dairy/livestock economics, climate adaptation of dairy, livestock carbon markets/CDM, and mitigation costing. Internal approval process going on; shown interest in principle.",
         gender: "Female",
-        photo: "/members/smita.jpg",
+        photo: "/members/Dr Smita Sirohi.webp",
         status: "Internal approval process going on; shown interest in principle — Teams meeting 15/07/2026",
         profiles: [
           { label: "ICAR-NDRI Profile", url: "https://ndri.res.in/dr-smita-sirohi", icon: "🏛" },
@@ -638,7 +638,7 @@ export const sectors: Sector[] = [
         priority_tier: "Tier 2 — Core",
         notes: "Best-fit specialist for cyclone/storm and flood resilience criteria in coastal systems. ICAR internal approval in process. Internal approval process going on; shown interest in principle.",
         gender: "Male",
-        photo: "/members/sanjit.jpg",
+        photo: "/members/Dr Sanjit Maiti.jpg",
         status: "Internal approval process going on; shown interest in principle — ICAR internal approval in process; Teams meeting 13/07/2026",
         profiles: [
           { label: "Google Scholar", url: "https://scholar.google.com/citations?user=7q49UQwAAAAJ&hl=en", icon: "🎓" },
