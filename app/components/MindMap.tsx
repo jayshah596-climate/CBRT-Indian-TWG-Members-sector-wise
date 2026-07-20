@@ -516,37 +516,6 @@ export default function MindMap() {
         </div>
       </div>
 
-      {/* Legend */}
-      <div style={{
-        position: 'absolute', bottom: 16, left: 16, zIndex: 10,
-        background: 'rgba(15,23,42,0.85)',
-        border: '1px solid rgba(255,255,255,0.08)',
-        borderRadius: 10, padding: '10px 14px',
-        backdropFilter: 'blur(8px)',
-      }}>
-        <div style={{ fontSize: 9, color: '#64748b', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 8 }}>Legend</div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-          {[
-            { label: 'Tier 1 — Anchor', color: '#818cf8', r: 10, filled: true, icon: '⚓' },
-            { label: 'Tier 1 — Core', color: '#64748b', r: 8, filled: false },
-            { label: 'Tier 2 — Technical / Advisory', color: '#475569', r: 6, filled: false },
-          ].map((item) => (
-            <div key={item.label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-              <svg width={20} height={20}>
-                <circle cx={10} cy={10} r={item.r}
-                  fill={item.filled ? item.color : 'transparent'}
-                  fillOpacity={item.filled ? 0.3 : 1}
-                  stroke={item.color} strokeWidth={1.5} />
-                {item.icon && (
-                  <text x={10} y={14} textAnchor="middle" fontSize={8} fill={item.color}>{item.icon}</text>
-                )}
-              </svg>
-              <span style={{ fontSize: 10, color: '#94a3b8' }}>{item.label}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* Zoom hint */}
       <div style={{
         position: 'absolute', bottom: 16, right: selected ? 420 : 16, zIndex: 10,
