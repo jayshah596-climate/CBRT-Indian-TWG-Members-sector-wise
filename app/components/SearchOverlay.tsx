@@ -109,8 +109,8 @@ export default function SearchOverlay({ onSelect, onClose }: Props) {
                   <span style={{
                     fontSize: 9, padding: '2px 7px', borderRadius: 8,
                     background: `${sector.color}20`, color: sector.color,
-                    border: `1px solid ${sector.color}40`, fontWeight: 700,
-                  }}>{sector.mfa}</span>
+                    border: `1px solid ${sector.color}40`, fontWeight: 600,
+                  }}>{sector.label.replace('\n', ' ')}</span>
                 </div>
               </div>
             ))}
