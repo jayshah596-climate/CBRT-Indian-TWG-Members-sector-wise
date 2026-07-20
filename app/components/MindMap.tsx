@@ -544,7 +544,19 @@ export default function MindMap() {
   );
 }
 
-const CROP_MEETINGS = [
+interface MeetingEntry {
+  ref: string;
+  globalDate: string;
+  globalTime?: string;
+  indiaDate?: string;
+  indiaTime?: string;
+  topic: string;
+  agenda: string[];
+  joint?: boolean;
+  tbc?: boolean;
+}
+
+const CROP_MEETINGS: MeetingEntry[] = [
   {
     ref: 'Intro',
     globalDate: 'Thu 23 Jul 2026',
@@ -552,7 +564,7 @@ const CROP_MEETINGS = [
     indiaDate: '(Joint — join at 16:00 IST)',
     indiaTime: '16:00–17:30 IST',
     topic: 'Introduction Session',
-    detail: 'Introduction to the CBRT: taxonomy scope, classification methodology, role of TWG',
+    agenda: ['Introduction to the CBRT', 'Taxonomy scope and classification methodology', 'Role of TWG — structure and timeline'],
     joint: true,
   },
   {
@@ -562,7 +574,7 @@ const CROP_MEETINGS = [
     indiaDate: 'Wed 02 Sep 2026',
     indiaTime: '14:00–15:00 IST',
     topic: 'Resilient Crop Production — Meeting 1',
-    detail: 'A&R investments for temperature changes',
+    agenda: ['A&R investments for temperature changes'],
   },
   {
     ref: 'M2',
@@ -571,7 +583,7 @@ const CROP_MEETINGS = [
     indiaDate: 'Wed 07 Oct 2026',
     indiaTime: '14:00–15:00 IST',
     topic: 'Resilient Crop Production — Meeting 2',
-    detail: 'A&R investments for water scarcity',
+    agenda: ['A&R investments for water scarcity'],
   },
   {
     ref: 'M3',
@@ -580,7 +592,7 @@ const CROP_MEETINGS = [
     indiaDate: 'Wed 04 Nov 2026',
     indiaTime: '14:00–15:00 IST',
     topic: 'Resilient Crop Production — Meeting 3',
-    detail: 'A&R investments for multi-hazards (climate variability & atmospheric changes)',
+    agenda: ['A&R investments for multi-hazards (climate variability & atmospheric changes)'],
   },
   {
     ref: 'M4',
@@ -589,7 +601,7 @@ const CROP_MEETINGS = [
     indiaDate: 'Wed 16 Dec 2026',
     indiaTime: '14:00–15:00 IST',
     topic: 'Resilient Crop Production — Meeting 4',
-    detail: 'A&R investments for extreme events & flooding',
+    agenda: ['A&R investments for extreme events & flooding'],
   },
   {
     ref: 'M5',
@@ -598,7 +610,7 @@ const CROP_MEETINGS = [
     indiaDate: 'Wed 03 Feb 2027',
     indiaTime: '14:00–15:00 IST',
     topic: 'Resilient Crop Production — Meeting 5',
-    detail: 'Consolidation — full criteria draft consolidation',
+    agenda: ['Full criteria draft consolidation'],
   },
   {
     ref: 'M6',
@@ -607,7 +619,7 @@ const CROP_MEETINGS = [
     indiaDate: 'Wed 03 Mar 2027',
     indiaTime: '14:00–15:00 IST',
     topic: 'Criteria Review — Meeting 6',
-    detail: 'Criteria review — feedback discussion',
+    agenda: ['Criteria review — feedback discussion'],
   },
   {
     ref: 'M7',
@@ -616,18 +628,90 @@ const CROP_MEETINGS = [
     indiaDate: 'Wed 28 Jul 2027',
     indiaTime: '14:00–15:00 IST',
     topic: 'TWG Meeting 7',
-    detail: 'Public consultation feedback review',
+    agenda: ['Public consultation feedback review'],
   },
 ];
+
+const LIVESTOCK_MEETINGS: MeetingEntry[] = [
+  {
+    ref: 'Intro',
+    globalDate: '2 Sep 2026',
+    topic: 'Introduction to the CBRT',
+    agenda: ['Group introduction', 'What is CBRT?', 'Taxonomy scope and classification methodology', 'Role of TWG — structure and timeline'],
+    joint: true,
+  },
+  {
+    ref: 'M1',
+    globalDate: '22 Sep 2026',
+    topic: 'Resilient Livestock Production — Meeting 1',
+    agenda: ['A&R investments for temperature changes', 'Potential for maladaptation / significant harm', 'Potential proxies'],
+  },
+  {
+    ref: 'M2',
+    globalDate: '20 Oct 2026',
+    topic: 'Resilient Livestock Production — Meeting 2',
+    agenda: ['A&R investments for water scarcity', 'Potential for maladaptation / significant harm', 'Potential proxies'],
+  },
+  {
+    ref: 'M3',
+    globalDate: '24 Nov 2026',
+    topic: 'Resilient Livestock Production — Meeting 3',
+    agenda: ['A&R investments for multi-hazards (disease vectors, feed/forage availability)', 'Potential for maladaptation / significant harm', 'Potential proxies'],
+  },
+  {
+    ref: 'M4',
+    globalDate: '16 Dec 2026',
+    topic: 'Resilient Livestock Production — Meeting 4',
+    agenda: ['A&R investments for extreme events & flooding', 'Potential for maladaptation / significant harm', 'Potential proxies'],
+  },
+  {
+    ref: 'M5',
+    globalDate: '27 Jan 2027',
+    topic: 'Resilient Livestock Production — Meeting 5 (Consolidation)',
+    agenda: ['Consolidation of criteria', 'Review of cross-cutting themes', 'Alignment', 'Finalisation of proxy approaches'],
+  },
+  {
+    ref: 'M6',
+    globalDate: '23 Feb 2027',
+    topic: 'Criteria Review — Meeting 6',
+    agenda: ['Presentation of draft criteria structure and content', 'Review of eligibility, thresholds, and methodologies', 'Identification of outstanding gaps and areas for refinement', 'Agreement on final inputs ahead of consultation'],
+  },
+  {
+    ref: 'M7',
+    globalDate: 'TBC',
+    topic: 'Public Consultation',
+    agenda: ['Launch of public consultation', 'Collection of stakeholder feedback', 'Initial reflections on key themes emerging', 'Ongoing consultation period'],
+    tbc: true,
+  },
+  {
+    ref: 'M8',
+    globalDate: 'TBC',
+    topic: 'TWG Meeting 7 — Public Consultation Feedback Review',
+    agenda: ['Presentation of consultation feedback summary', 'Discussion of key issues raised', 'Agreement on revisions to criteria and background paper'],
+    tbc: true,
+  },
+  {
+    ref: 'Final',
+    globalDate: 'TBC',
+    topic: 'Launch and Dissemination',
+    agenda: ['Final feedback', 'Launch planning and next steps'],
+    tbc: true,
+  },
+];
+
+const SECTOR_MEETINGS: Record<string, MeetingEntry[]> = {
+  'crop-production': CROP_MEETINGS,
+  'livestock': LIVESTOCK_MEETINGS,
+};
 
 function DetailPanel({ info, onClose }: { info: SelectedInfo; onClose: () => void }) {
   const [activeTab, setActiveTab] = useState<'members' | 'timeline'>('members');
 
   if (info.type === 'sector' && info.sector) {
     const sector = info.sector;
-    const tier1 = sector.members.filter(m => m.priority_tier.includes('Tier 1'));
-    const tier2 = sector.members.filter(m => m.priority_tier.includes('Tier 2'));
-    const hasTimeline = sector.id === 'crop-production';
+    const meetings = SECTOR_MEETINGS[sector.id] || [];
+    const hasMeetings = meetings.length > 0;
+    const hasBothColumns = meetings.some(m => m.indiaDate);
     return (
       <div className="slide-in" style={{
         position: 'absolute', top: 0, right: 0, bottom: 0,
@@ -664,65 +748,46 @@ function DetailPanel({ info, onClose }: { info: SelectedInfo; onClose: () => voi
           </div>
         </div>
 
-        {/* Tabs (only for sectors with timeline) */}
-        {hasTimeline && (
-          <div style={{ display: 'flex', borderBottom: '1px solid rgba(255,255,255,0.08)', flexShrink: 0, padding: '0 20px' }}>
-            {(['members', 'timeline'] as const).map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                style={{
-                  background: 'none', border: 'none', cursor: 'pointer',
-                  padding: '10px 14px 9px',
-                  fontSize: 12, fontWeight: activeTab === tab ? 700 : 400,
-                  color: activeTab === tab ? sector.color : '#64748b',
-                  borderBottom: activeTab === tab ? `2px solid ${sector.color}` : '2px solid transparent',
-                  marginBottom: -1,
-                  transition: 'all 0.15s',
-                  textTransform: 'capitalize',
-                }}
-              >
-                {tab === 'members' ? '👥 Members' : '📅 Meeting Timeline'}
-              </button>
-            ))}
+        {/* Tabs — always shown */}
+        <div style={{ display: 'flex', borderBottom: '1px solid rgba(255,255,255,0.08)', flexShrink: 0, padding: '0 20px' }}>
+          {(['members', 'timeline'] as const).map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              style={{
+                background: 'none', border: 'none', cursor: 'pointer',
+                padding: '10px 14px 9px',
+                fontSize: 12, fontWeight: activeTab === tab ? 700 : 400,
+                color: activeTab === tab ? sector.color : '#64748b',
+                borderBottom: activeTab === tab ? `2px solid ${sector.color}` : '2px solid transparent',
+                marginBottom: -1,
+                transition: 'all 0.15s',
+              }}
+            >
+              {tab === 'members' ? '👥 Members' : '📅 Meeting Schedule'}
+            </button>
+          ))}
+        </div>
+
+        {/* Members tab — flat list, no tier grouping */}
+        {activeTab === 'members' && (
+          <div style={{ flex: 1, overflowY: 'auto', padding: '8px 0' }}>
+            {sector.members.length === 0 ? (
+              <div style={{ padding: '32px 20px', textAlign: 'center', color: '#475569' }}>
+                <div style={{ fontSize: 28, marginBottom: 10 }}>🔄</div>
+                <div style={{ fontSize: 13, fontWeight: 600, marginBottom: 4 }}>Members not yet finalised</div>
+                <div style={{ fontSize: 11 }}>This TWG list is under development.</div>
+              </div>
+            ) : (
+              sector.members.map((m) => (
+                <MemberListItem key={m.name} member={m} sector={info.sector!} />
+              ))
+            )}
           </div>
         )}
 
-        {/* Members tab */}
-        {(!hasTimeline || activeTab === 'members') && (
-          <>
-            {/* Tier stats */}
-            <div style={{ padding: '12px 20px', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', gap: 12, flexShrink: 0 }}>
-              <div style={{ flex: 1, background: 'rgba(234,179,8,0.08)', border: '1px solid rgba(234,179,8,0.2)', borderRadius: 8, padding: '8px 12px', textAlign: 'center' }}>
-                <div style={{ fontSize: 20, fontWeight: 800, color: '#fbbf24' }}>{tier1.length}</div>
-                <div style={{ fontSize: 9, color: '#92400e', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em' }}>Tier 1</div>
-              </div>
-              <div style={{ flex: 1, background: 'rgba(148,163,184,0.06)', border: '1px solid rgba(148,163,184,0.15)', borderRadius: 8, padding: '8px 12px', textAlign: 'center' }}>
-                <div style={{ fontSize: 20, fontWeight: 800, color: '#94a3b8' }}>{tier2.length}</div>
-                <div style={{ fontSize: 9, color: '#64748b', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em' }}>Tier 2</div>
-              </div>
-            </div>
-            {/* Members list */}
-            <div style={{ flex: 1, overflowY: 'auto', padding: '8px 0' }}>
-              {[
-                { label: 'Tier 1 — Priority Anchors & Core', members: tier1, color: '#fbbf24' },
-                { label: 'Tier 2 — Technical & Advisory', members: tier2, color: '#94a3b8' },
-              ].map(({ label, members, color }) => members.length > 0 && (
-                <div key={label}>
-                  <div style={{ padding: '10px 20px 6px', fontSize: 9, color, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-                    {label}
-                  </div>
-                  {members.map((m) => (
-                    <MemberListItem key={m.name} member={m} sector={info.sector!} />
-                  ))}
-                </div>
-              ))}
-            </div>
-          </>
-        )}
-
         {/* Timeline tab */}
-        {hasTimeline && activeTab === 'timeline' && (
+        {activeTab === 'timeline' && (
           <div style={{ flex: 1, overflowY: 'auto', padding: '16px' }}>
             {/* Note */}
             <div style={{
@@ -734,69 +799,85 @@ function DetailPanel({ info, onClose }: { info: SelectedInfo; onClose: () => voi
                 📌 Note
               </div>
               <p style={{ margin: 0, fontSize: 11, color: '#94a3b8', lineHeight: 1.6 }}>
-                The India TWG will serve as a subgroup of the Global Livestock TWG, bringing India-specific expertise while working closely alongside the global criteria development process.
+                The India TWG will serve as a subgroup of the Global TWG, bringing India-specific expertise while working closely alongside the global criteria development process.
               </p>
             </div>
 
-            {/* Column headers */}
-            <div style={{ display: 'grid', gridTemplateColumns: '36px 1fr 1fr', gap: 6, marginBottom: 8, padding: '0 2px' }}>
-              <div />
-              <div style={{
-                fontSize: 9, fontWeight: 700, color: '#818cf8',
-                textTransform: 'uppercase', letterSpacing: '0.07em',
-                display: 'flex', alignItems: 'center', gap: 4,
-              }}>🌍 Global TWG</div>
-              <div style={{
-                fontSize: 9, fontWeight: 700, color: sector.color,
-                textTransform: 'uppercase', letterSpacing: '0.07em',
-                display: 'flex', alignItems: 'center', gap: 4,
-              }}>🇮🇳 India TWG (IST)</div>
-            </div>
+            {!hasMeetings ? (
+              <div style={{ padding: '32px 0', textAlign: 'center', color: '#475569' }}>
+                <div style={{ fontSize: 28, marginBottom: 10 }}>📆</div>
+                <div style={{ fontSize: 13, fontWeight: 600, color: '#64748b', marginBottom: 4 }}>No meetings scheduled yet</div>
+                <div style={{ fontSize: 11 }}>Meeting dates will be added once confirmed.</div>
+              </div>
+            ) : (
+              <>
+                {/* Column headers */}
+                {hasBothColumns && (
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 0, marginBottom: 8, padding: '0 4px' }}>
+                    <div style={{ fontSize: 9, fontWeight: 700, color: '#818cf8', textTransform: 'uppercase', letterSpacing: '0.07em' }}>🌍 Global TWG</div>
+                    <div style={{ fontSize: 9, fontWeight: 700, color: sector.color, textTransform: 'uppercase', letterSpacing: '0.07em' }}>🇮🇳 India TWG (IST)</div>
+                  </div>
+                )}
 
-            {/* Meeting rows */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-              {CROP_MEETINGS.map((m) => (
-                <div key={m.ref} style={{
-                  borderRadius: 10,
-                  border: m.joint
-                    ? `1px solid rgba(129,140,248,0.3)`
-                    : `1px solid rgba(255,255,255,0.07)`,
-                  background: m.joint
-                    ? 'rgba(129,140,248,0.07)'
-                    : 'rgba(255,255,255,0.02)',
-                  overflow: 'hidden',
-                }}>
-                  {/* Topic bar */}
-                  <div style={{
-                    padding: '7px 10px 6px',
-                    borderBottom: '1px solid rgba(255,255,255,0.05)',
-                    display: 'flex', alignItems: 'center', gap: 8,
-                  }}>
-                    <span style={{
-                      fontSize: 9, fontWeight: 800, color: m.joint ? '#818cf8' : sector.color,
-                      background: m.joint ? 'rgba(129,140,248,0.15)' : `${sector.color}15`,
-                      border: `1px solid ${m.joint ? 'rgba(129,140,248,0.3)' : sector.color + '30'}`,
-                      borderRadius: 5, padding: '2px 6px', flexShrink: 0,
-                    }}>{m.ref}</span>
-                    <div>
-                      <div style={{ fontSize: 11, fontWeight: 700, color: '#e2e8f0', lineHeight: 1.2 }}>{m.topic}</div>
-                      <div style={{ fontSize: 10, color: '#64748b', marginTop: 2, lineHeight: 1.4 }}>{m.detail}</div>
+                {/* Meeting cards */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                  {meetings.map((m) => (
+                    <div key={m.ref} style={{
+                      borderRadius: 10,
+                      border: m.joint
+                        ? `1px solid rgba(129,140,248,0.35)`
+                        : m.tbc
+                          ? `1px solid rgba(255,255,255,0.05)`
+                          : `1px solid rgba(255,255,255,0.08)`,
+                      background: m.joint
+                        ? 'rgba(129,140,248,0.07)'
+                        : m.tbc
+                          ? 'rgba(255,255,255,0.01)'
+                          : 'rgba(255,255,255,0.02)',
+                      overflow: 'hidden',
+                    }}>
+                      {/* Topic + ref */}
+                      <div style={{
+                        padding: '8px 10px 7px',
+                        borderBottom: '1px solid rgba(255,255,255,0.05)',
+                        display: 'flex', alignItems: 'flex-start', gap: 8,
+                      }}>
+                        <span style={{
+                          fontSize: 9, fontWeight: 800, flexShrink: 0, marginTop: 1,
+                          color: m.tbc ? '#475569' : m.joint ? '#818cf8' : sector.color,
+                          background: m.tbc ? 'rgba(71,85,105,0.15)' : m.joint ? 'rgba(129,140,248,0.15)' : `${sector.color}15`,
+                          border: `1px solid ${m.tbc ? 'rgba(71,85,105,0.25)' : m.joint ? 'rgba(129,140,248,0.3)' : sector.color + '30'}`,
+                          borderRadius: 5, padding: '2px 6px',
+                        }}>{m.ref}</span>
+                        <div style={{ flex: 1 }}>
+                          <div style={{ fontSize: 11, fontWeight: 700, color: m.tbc ? '#64748b' : '#e2e8f0', lineHeight: 1.3 }}>{m.topic}</div>
+                          {m.agenda.length > 0 && (
+                            <ul style={{ margin: '5px 0 0 0', padding: '0 0 0 14px', listStyle: 'disc' }}>
+                              {m.agenda.map((item, i) => (
+                                <li key={i} style={{ fontSize: 10, color: '#64748b', lineHeight: 1.5, marginBottom: 1 }}>{item}</li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
+                      </div>
+                      {/* Date row */}
+                      <div style={{ display: 'grid', gridTemplateColumns: hasBothColumns ? '1fr 1fr' : '1fr', gap: 0 }}>
+                        <div style={{ padding: '6px 10px', borderRight: hasBothColumns ? '1px solid rgba(255,255,255,0.05)' : 'none' }}>
+                          <div style={{ fontSize: 10, fontWeight: 600, color: m.tbc ? '#475569' : '#c7d2fe', lineHeight: 1.3 }}>{m.globalDate}</div>
+                          {m.globalTime && <div style={{ fontSize: 9, color: '#818cf8', marginTop: 1 }}>{m.globalTime}</div>}
+                        </div>
+                        {hasBothColumns && (
+                          <div style={{ padding: '6px 10px' }}>
+                            <div style={{ fontSize: 10, fontWeight: 600, color: '#bbf7d0', lineHeight: 1.3 }}>{m.indiaDate}</div>
+                            {m.indiaTime && <div style={{ fontSize: 9, color: sector.color, marginTop: 1 }}>{m.indiaTime}</div>}
+                          </div>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                  {/* Date columns */}
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 0 }}>
-                    <div style={{ padding: '7px 10px', borderRight: '1px solid rgba(255,255,255,0.05)' }}>
-                      <div style={{ fontSize: 10, fontWeight: 600, color: '#c7d2fe', lineHeight: 1.3 }}>{m.globalDate}</div>
-                      <div style={{ fontSize: 9, color: '#818cf8', marginTop: 1 }}>{m.globalTime}</div>
-                    </div>
-                    <div style={{ padding: '7px 10px' }}>
-                      <div style={{ fontSize: 10, fontWeight: 600, color: '#bbf7d0', lineHeight: 1.3 }}>{m.indiaDate}</div>
-                      <div style={{ fontSize: 9, color: sector.color, marginTop: 1 }}>{m.indiaTime}</div>
-                    </div>
-                  </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </>
+            )}
           </div>
         )}
       </div>
