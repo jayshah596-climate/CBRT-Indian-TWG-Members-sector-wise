@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from 'react';
 import * as d3 from 'd3';
-import { sectors, Sector, Member, ProfileLink, Publication } from '../data/stakeholders';
+import { sectors, totalMembers, Sector, Member, ProfileLink, Publication } from '../data/stakeholders';
 import SearchOverlay from './SearchOverlay';
 
 interface NodeDatum {
@@ -245,7 +245,7 @@ export default function MindMap() {
           .attr('fill', '#a5b4fc')
           .attr('font-size', 10)
           .attr('font-weight', 500)
-          .text('44 Candidates • 5 Sectors');
+          .text(`${totalMembers} Members • 5 Sectors`);
 
       } else if (node.type === 'sector') {
         const color = node.sectorColor!;
