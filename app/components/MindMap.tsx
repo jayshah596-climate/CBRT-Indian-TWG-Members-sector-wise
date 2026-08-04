@@ -245,7 +245,7 @@ export default function MindMap() {
           .attr('fill', '#a5b4fc')
           .attr('font-size', 10)
           .attr('font-weight', 500)
-          .text(`${totalMembers} Members • 5 Sectors`);
+          .text(`${totalMembers} Members • ${sectors.length} Sectors`);
 
       } else if (node.type === 'sector') {
         const color = node.sectorColor!;
@@ -288,8 +288,12 @@ export default function MindMap() {
         ng.append('text')
           .attr('text-anchor', 'middle')
           .attr('dominant-baseline', 'middle')
-          .attr('font-size', 18)
-          .text(node.sector!.icon);
+          .attr('y', 10)
+          .attr('fill', '#fff')
+          .attr('font-size', 10)
+          .attr('font-weight', 700)
+          .attr('letter-spacing', '0.03em')
+          .text(node.sector!.mfa);
 
         // Member count
         ng.append('text')
@@ -301,14 +305,14 @@ export default function MindMap() {
 
         // Label outside circle
         const labelLines = node.label.split('\n');
-        const labelY = r + 18;
+        const labelY = r + 22;
         labelLines.forEach((line, i) => {
           ng.append('text')
             .attr('text-anchor', 'middle')
-            .attr('y', labelY + i * 14)
+            .attr('y', labelY + i * 17)
             .attr('fill', '#e2e8f0')
-            .attr('font-size', 11)
-            .attr('font-weight', 600)
+            .attr('font-size', 15)
+            .attr('font-weight', 700)
             .text(line);
         });
 
@@ -494,7 +498,7 @@ export default function MindMap() {
           {sectors.map((s) => (
             <div key={s.id} style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
               <div style={{ width: 8, height: 8, borderRadius: '50%', background: s.color }} />
-              <span style={{ fontSize: 10, color: '#94a3b8' }}>{s.label.replace('\n', ' ')}</span>
+              <span style={{ fontSize: 11, color: '#cbd5e1' }}>{s.label.replace('\n', ' ')}</span>
             </div>
           ))}
           <button

@@ -771,14 +771,6 @@ export const sectors: Sector[] = [
     members: []
   },
   {
-    id: "buildings-construction",
-    label: "Buildings &\nConstruction",
-    mfa: "COOP-1",
-    color: "#7c3aed",
-    icon: "🏗️",
-    members: []
-  },
-  {
     id: "energy-infrastructure",
     label: "Energy\nInfrastructure",
     mfa: "MFA-4",
@@ -974,6 +966,22 @@ export const sectors: Sector[] = [
         ]
       }
     ]
+  },
+  {
+    id: "gef-1",
+    label: "GEF Project 1\n(sector TBD)",
+    mfa: "GEF-1",
+    color: "#7c3aed",
+    icon: "🌐",
+    members: []
+  },
+  {
+    id: "gef-2",
+    label: "GEF Project 2\n(sector TBD)",
+    mfa: "GEF-2",
+    color: "#0891b2",
+    icon: "🌎",
+    members: []
   }
 ];
 
