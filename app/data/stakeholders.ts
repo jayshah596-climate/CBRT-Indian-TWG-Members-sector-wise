@@ -666,6 +666,99 @@ export const sectors: Sector[] = [
             journal: "Tropical Animal Health and Production"
           }
         ]
+      },
+      {
+        number: "7",
+        name: "Dr. Thirunavukkarasu D",
+        title: "Professor, Dept. of Veterinary and Animal Husbandry Extension Education, Veterinary College and Research Institute, Namakkal",
+        organisation: "Tamil Nadu Veterinary and Animal Sciences University (TANUVAS)",
+        type: "State veterinary university (government)",
+        city: "Namakkal, Tamil Nadu",
+        sector_expertise: "Small-ruminant (sheep/goat) climate resilience; climate-smart goat farming; livestock extension delivery; AI-enabled heat-stress monitoring; smallholder/tribal livelihoods",
+        ar_relevance: "Fills the sheep/goat production gap on the roster and brings farmer-extension-delivery expertise directly relevant to the TWG's MRV and smallholder-implementation questions.",
+        key_projects: "Co-editor, Elsevier book 'Sustainable Goat Production in the Changing Climate'; co-author, book chapter on AI-enabled heat-stress monitoring for climate-resilient ruminants (2025/2026); co-author, 'Factors affecting livestock farmers' access and level of engagement with extension agencies in Tamil Nadu, India' (Development in Practice, 2025); Co-Coordinator, MEA-sponsored international training programme 'Smallholder Livestock and Commercial Poultry Farming' (Indo-African Forum); extension-delivery experience mobilising tribal farmers into sheep/goat commodity interest groups.",
+        cbrt_twg_role: "Adaptation Generalist leaning Specialist (small-ruminant systems)",
+        email: "",
+        phone: "",
+        linkedin: "https://www.linkedin.com/in/dthirunavukkarasu/",
+        website: "https://tanuvas.irins.org/profile/302963",
+        priority_tier: "Not yet tiered",
+        notes: "CBRT relevance: performance metrics & MRV (AI-enabled monitoring platforms); smallholder/extension-delivery proxies; small-ruminant activity/measure definitions. Reasoning: extension & farmer-delivery specialist | small-ruminant climate-resilience research and extension practice | small-ruminant (sheep/goat) & smallholder-extension segment. Caveat: direct authorship not independently confirmed on every TANUVAS climate-resilience output surfaced in research (e.g. indigenous-chicken epigenetics study) — confirm contribution list directly. Proposed by Jay Shah. Tracking-sheet updates: reached out; received interest; said yes in a Teams meeting; headshot shared for the webpage (not yet uploaded to this repo — see README in /public/members).",
+        gender: "Male",
+        status: "Confirmation Status field on tracking sheet: Not confirmed — though the Updates log notes a verbal yes in a Teams meeting; treat as pending written/final confirmation",
+        profiles: [
+          { label: "LinkedIn", url: "https://www.linkedin.com/in/dthirunavukkarasu/", icon: "💼" },
+          { label: "TANUVAS Profile", url: "https://tanuvas.irins.org/profile/302963", icon: "🏛" },
+          { label: "Google Scholar", url: "https://scholar.google.com/citations?user=f-QR1pQAAAAJ&hl=en", icon: "🎓" }
+        ],
+        publications: [
+          {
+            title: "Sustainable Goat Production in the Changing Climate (co-editor)",
+            url: "https://scholar.google.com/citations?user=f-QR1pQAAAAJ&hl=en",
+            journal: "Elsevier (Book)"
+          },
+          {
+            title: "AI-enabled heat-stress monitoring for climate-resilient ruminants (book chapter)",
+            url: "https://scholar.google.com/citations?user=f-QR1pQAAAAJ&hl=en",
+            year: "2025/2026"
+          },
+          {
+            title: "Factors affecting livestock farmers' access and level of engagement with extension agencies in Tamil Nadu, India",
+            url: "https://scholar.google.com/citations?user=f-QR1pQAAAAJ&hl=en",
+            year: "2025",
+            journal: "Development in Practice"
+          }
+        ]
+      },
+      {
+        number: "8",
+        name: "Silpa M.V.",
+        title: "Assistant Professor",
+        organisation: "Rajiv Gandhi Institute of Veterinary Education and Research (RIVER), Puducherry",
+        type: "State veterinary institute (government, Puducherry)",
+        city: "Puducherry",
+        sector_expertise: "Genetics/epigenetics of heat-stress resilience; coastal-livestock vulnerability; poultry & goat heat physiology; animal genetics & epigenetics; heat-stress transcriptomics",
+        ar_relevance: "Deepest genetics/molecular-science expertise identified for the roster — work sits at the epigenetic/transcriptomic mechanisms that could underpin a more rigorous, biomarker-based definition of 'climate-resilient breed' than the roster currently has access to.",
+        key_projects: "636+ citations (Google Scholar: Animal Genetics / Climate Change / Livestock Production); co-author, 'Goat as the ideal climate-resilient animal model in tropical environment' (Int. J. Biometeorology, 2021, with V. Sejian et al.); co-author, 'Heat stress and poultry production: impact and amelioration' (2021); co-author, 'Impact of Climate Change on Livestock Production and Mitigation Strategies in Coastal Region' (Springer, 2025); corresponding/key author, 'Epigenetic Mechanisms Associated with Livestock Adaptation to Heat Stress' (MDPI Animals, 2025).",
+        cbrt_twg_role: "Livestock Specialist (genetics/molecular science)",
+        email: "",
+        phone: "",
+        linkedin: "https://www.linkedin.com/in/silpa-m-v-528512222/",
+        website: "https://scholar.google.com/citations?user=zSGzDXsAAAAJ&hl=en",
+        priority_tier: "Not yet tiered",
+        notes: "CBRT relevance: performance metrics (breed/genetic resilience biomarkers); materiality (coastal exposure); indigenous-breed retention and genetic-diversity criteria. Reasoning: genetics/molecular-science specialist | peer-reviewed climate-stress genetics research since c. 2020 | dairy/goat/poultry genetics & coastal-systems segment. Note: frequent co-author and now institutional colleague of Dr. V. Sejian (RIVER's current Dean, also on this roster) — factor into TWG balance, as their expertise is complementary but networks overlap closely. Proposed by Jay Shah. Tracking-sheet updates: reached out; received interest; said yes in a Teams meeting; headshot shared for the webpage (not yet uploaded to this repo — see README in /public/members).",
+        gender: "Female",
+        status: "Confirmation Status field on tracking sheet: Not confirmed — though the Updates log notes a verbal yes in a Teams meeting; treat as pending written/final confirmation",
+        profiles: [
+          { label: "LinkedIn", url: "https://www.linkedin.com/in/silpa-m-v-528512222/", icon: "💼" },
+          { label: "Google Scholar", url: "https://scholar.google.com/citations?user=zSGzDXsAAAAJ&hl=en", icon: "🎓" },
+          { label: "Key Publication (MDPI)", url: "https://www.mdpi.com/2079-7737/14/9/1154", icon: "📄" }
+        ],
+        publications: [
+          {
+            title: "Goat as the ideal climate-resilient animal model in tropical environment (with V. Sejian et al.)",
+            url: "https://scholar.google.com/citations?user=zSGzDXsAAAAJ&hl=en",
+            year: "2021",
+            journal: "International Journal of Biometeorology"
+          },
+          {
+            title: "Heat stress and poultry production: impact and amelioration",
+            url: "https://scholar.google.com/citations?user=zSGzDXsAAAAJ&hl=en",
+            year: "2021"
+          },
+          {
+            title: "Impact of Climate Change on Livestock Production and Mitigation Strategies in Coastal Region",
+            url: "https://scholar.google.com/citations?user=zSGzDXsAAAAJ&hl=en",
+            year: "2025",
+            journal: "Springer"
+          },
+          {
+            title: "Epigenetic Mechanisms Associated with Livestock Adaptation to Heat Stress",
+            url: "https://www.mdpi.com/2079-7737/14/9/1154",
+            year: "2025",
+            journal: "MDPI Animals"
+          }
+        ]
       }
     ]
   },
@@ -691,7 +784,196 @@ export const sectors: Sector[] = [
     mfa: "MFA-4",
     color: "#dc2626",
     icon: "⚡",
-    members: []
+    members: [
+      {
+        number: "1",
+        name: "Amit Tripathi",
+        title: "Director",
+        organisation: "Dravya, the IIHS Centre for Materials and Sustainable Development (Indian Institute for Human Settlements)",
+        type: "Academic / Research Institute (IIHS is a university-status institution)",
+        city: "India",
+        sector_expertise: "Climate-resilient power infrastructure; low-carbon energy transitions and renewable energy grid integration; cross-country power system strengthening (multilateral bank-financed); critical minerals and materials governance for energy infrastructure supply chains; energy policy and regulatory design; disaster-resilient infrastructure standards (former CDRI)",
+        ar_relevance: "CONFIRMED directly from Dravya's own official team page bio: 'Amit Tripathi is an energy sector expert with nearly two decades of experience. His work focuses on advancing low-carbon transitions, renewable energy integration, and climate-resilient infrastructure.' As former Advisor, Power Sector at CDRI (Coalition for Disaster Resilient Infrastructure — the global coalition India itself launched in 2019), he worked directly with governments, regulators, and multilateral development banks across multiple countries to strengthen power systems and shape energy policy. He now directs Dravya, IIHS's centre explicitly tasked with embedding 'equity and climate resilience' into India's materials/minerals strategy for decarbonisation — directly relevant to the supply-chain/component-availability dimension of energy infrastructure resilience (e.g. critical mineral security for grid, storage, and renewable hardware).",
+        key_projects: "Specialisms: energy sector policy, low-carbon transitions, renewable energy integration, climate-resilient infrastructure, power system strengthening across countries, critical minerals/materials governance for the energy transition, climate governance and energy policy. Experience: nearly 20 years in the energy sector; former Advisor, Power Sector, CDRI (worked with governments, regulators and multilateral banks across countries); Bachelor's degree in Mechanical Engineering; Master's in Globalisation and Corporate Development, SOAS, University of London, with a specialisation in climate governance and energy policy; earlier career included Associate Director-Business Development, Terracon Ecotech Pvt Ltd (CleanTech/Environment, London/India).",
+        cbrt_twg_role: "Energy Specialist",
+        email: "amit.tripathi@iihs.ac.in",
+        phone: "",
+        linkedin: "https://linkedin.com/in/amitripathi",
+        website: "https://dravya.iihs.co.in/people",
+        priority_tier: "Not yet tiered",
+        notes: "CBRT relevance: direct, hands-on multi-country climate-resilient power infrastructure advisory experience (via former CDRI role) — a strong complement to the more research/academic-oriented candidates already in the TWG pool; brings the critical-minerals/materials-supply-chain angle to energy infrastructure resilience (component and hardware availability for grid, storage, and renewables); also positioned to speak to how CBRT criteria would need to interoperate with CDRI's own global standards. Reasoning: TWG Role — climate-resilient power infrastructure and critical-minerals/materials supply-chain resilience lead | A&R Experience — nearly 2 decades in energy sector; former CDRI Power Sector Advisor with direct multi-country, multilateral-bank-engaged climate-resilient infrastructure advisory work; now directs a centre explicitly embedding climate resilience into India's materials/minerals strategy | Energy Profile/CBRT Segment — cross-cutting: Power System Strengthening (via CDRI background) and Materials/Critical Minerals Supply Chain Resilience for energy infrastructure hardware (grid, storage, renewables). Time zone: IST (New Delhi). Tracking-sheet updates: reached out 21/07/2026; received interest — yes (21/07/2026); also part of the Global TWG.",
+        gender: "Male",
+        status: "Interest received 21 July 2026; also confirmed as part of the Global TWG",
+        profiles: [
+          { label: "LinkedIn", url: "https://linkedin.com/in/amitripathi", icon: "💼" },
+          { label: "Dravya / IIHS People Page", url: "https://dravya.iihs.co.in/people", icon: "🏛" },
+          { label: "CDRI Team Page (former Advisor, Power Sector)", url: "https://cdri.world/team", icon: "🌍" }
+        ]
+      },
+      {
+        number: "2",
+        name: "Sonali Gokhale",
+        title: "Research Associate",
+        organisation: "Prayas Energy Group",
+        type: "NGO / Independent policy research",
+        city: "Mumbai, India",
+        sector_expertise: "Climate risk finance for financial institutions and energy infrastructure lenders; parametric insurance for extreme heat; DISCOM financial resilience; ESG/climate risk disclosure (RBI, SEBI); counterparty and collateral climate risk assessment tools",
+        ar_relevance: "Combines a rare dual background: 18+ years as a career financial-risk professional in Indian and international banking/infrastructure finance (Kotak Mahindra Bank, IDFC FIRST Bank, L&T Infrastructure Finance, Mizuho Financial Group, IDBI Bank), now applied specifically to climate risk assessment for India's energy and financial sectors at Prayas. She is the direct financial-risk counterpart to Shantanu Dixit's operational/engineering-side extreme-heat work: the two co-author together and jointly represented Prayas alongside CDRI at the 'Power Sector Resilience to Extreme Heat: Learning from Practice' session (GHCF2026), the same body of CDRI-linked work already informing this TWG's shortlist. Has a direct, publicly downloadable, named body of technical output: concept papers and working Excel-based risk-assessment tools she helped build.",
+        key_projects: "Specialisms: climate risk finance, project finance, credit/counterparty risk assessment, financial risk modelling, parametric insurance, ESG/sustainability disclosure, DISCOM financial health analysis. Experience: 18+ years in financial risk management across Indian and international banking before joining Prayas as Research Associate; MSc, University of Mumbai; roles included Project Finance Specialist (Kotak Mahindra Bank), Associate Director-Risk Solutions (IDFC FIRST Bank), Group Senior Manager-Risk & Asset Management (L&T Infrastructure Finance), Senior Risk Analyst (Mizuho Financial Group Global), Assistant Manager (IDBI Bank).",
+        cbrt_twg_role: "Energy Finance and Climate risk (A&R) specialist",
+        email: "sonali@prayaspune.org",
+        phone: "",
+        linkedin: "https://www.linkedin.com/in/sonali-gokhale-54677ba/",
+        website: "https://energy.prayaspune.org/our-work/research-report/climate-based-risk-assessment-for-reserve-bank-of-indias-regulated-entities",
+        priority_tier: "Not yet tiered",
+        notes: "CBRT relevance: financial materiality and bankability criteria for climate-adapted energy infrastructure; counterparty/collateral climate risk assessment methodology directly transferable to lender-facing CBRT criteria; parametric insurance design guidance for extreme-heat adaptation; DISCOM financial resilience under climate stress. Reasoning: TWG Role — climate risk finance & bankability lead for Energy Infrastructure, the lender/financial-institution-facing counterpart to the sector's technical/engineering resilience criteria | A&R Experience — built and published actual working climate risk assessment tools (CCRAT, CoCRAT, CCRAQ) aligned to RBI's 2024 Draft Disclosure Framework on Climate-related Financial Risks; co-authored a dedicated parametric insurance for extreme heat paper; jointly represented Prayas at the CDRI-linked GHCF2026 power sector heat resilience session | Energy Profile/CBRT Segment — cross-cutting Financial Materiality, Bankability & Risk-Transfer Instruments for Climate-Adapted Energy Infrastructure. Proposed by Jay. Time zone: IST (based in Mumbai). Tracking-sheet updates: reached out 21/07/2026; introductory call 27/7/2026 at 11:30am UK time.",
+        gender: "Female",
+        status: "Introductory call scheduled 27 July 2026 (11:30am UK time)",
+        profiles: [
+          { label: "LinkedIn", url: "https://www.linkedin.com/in/sonali-gokhale-54677ba/", icon: "💼" },
+          { label: "PEG Comments on SEBI Green Bonds Consultative Paper", url: "https://energy.prayaspune.org/images/pdf/PEG_Comments-SEBI_Consultative_Paper_on_Green_Bonds_Aug28_2024.pdf", icon: "📄" },
+          { label: "Climate-Based Risk Assessment for RBI's Regulated Entities", url: "https://energy.prayaspune.org/our-work/research-report/climate-based-risk-assessment-for-reserve-bank-of-indias-regulated-entities", icon: "📚" },
+          { label: "Parametric Insurance for Extreme Heat", url: "https://energy.prayaspune.org/our-work/article-and-blog/parametric-insurance-for-extreme-heat", icon: "🌡" },
+          { label: "Comments on India's Draft Climate Finance Taxonomy", url: "https://energy.prayaspune.org/our-work/policy-regulatory-engagements/comments-on-indias-draft-climate-finance-taxonomy", icon: "🏛" }
+        ]
+      },
+      {
+        number: "5",
+        name: "Sandhya Sundararagavan",
+        title: "Senior Advisor, Climate and Energy Resilient Innovation",
+        organisation: "Vasudha Foundation",
+        type: "NGO / Independent policy research",
+        city: "India",
+        sector_expertise: "Heat-proofing of critical power/road/rail infrastructure; sub-district heat risk mapping and utility infrastructure failure prediction; renewable grid integration and energy storage technology; power sector planning and electricity market/distribution reform; energy finance",
+        ar_relevance: "Rare combination of deep energy-sector technical grounding and an explicit current climate-resilience mandate. Her career spans four organisations already identified as top-tier in this TWG research process: TERI, CSTEP, Climate Policy Initiative (Manager, Energy Finance), and World Resources Institute India (Lead, Energy Transitions) — before her current role at Vasudha Foundation. Her recent published work is directly on point: 'Precision Resilience: Why Local Heat Intelligence Matters?' (2026, with Dr Kala Nair K) explicitly argues for sub-district heat risk mapping to proactively heat-proof critical power, road, and rail networks against thermal stress, and to enable predictive identification of utility infrastructure failure points and electricity demand spikes. A companion piece, 'When the Heat Doesn't End at Sunset in Karnataka,' examines night-time heat stress and compounding infrastructure/health effects, citing IPCC AR6.",
+        key_projects: "Specialisms: renewable grid integration, energy storage technology evaluation, power sector planning, electricity market and distribution sector reform, climate-energy resilience strategy, heat risk intelligence for infrastructure. Experience: MS, University of Massachusetts Amherst; Mechanical Engineering degree, University of Pune; led power sector programmes across TERI, CSTEP, CPI, and WRI India focused on renewable grid integration, power sector planning, electricity market reforms, and distribution sector reform at both national and state level; authored 'Evaluating Energy Storage Technologies for Wind Power Integration' (2012, with Erin Baker) — technical cost analysis of eleven storage technologies for renewable integration.",
+        cbrt_twg_role: "Energy Specialist (with an explicit current climate-resilience mandate)",
+        email: "",
+        phone: "",
+        linkedin: "https://linkedin.com/in/sandhyaragavan",
+        website: "https://vasudha-foundation.org/precision-resilience-why-local-heat-intelligence-matters/",
+        priority_tier: "Not yet tiered",
+        notes: "CBRT relevance: direct methodology for heat-proofing critical power infrastructure (generation, transmission, distribution) using sub-district climate hazard data; predictive infrastructure-failure and demand-spike forecasting approach transferable to CBRT's Energy Infrastructure resilience criteria; deep cross-institutional network across TERI/CSTEP/CPI/WRI likely to ease TWG coordination with other candidates from those organisations. Reasoning: TWG Role — energy infrastructure heat-resilience and grid-integration lead | A&R Experience — published 2026 work on heat-proofing critical power networks and predictive infrastructure-failure mapping; explicit 'Climate and Energy Resilient Innovation' mandate at current role | Energy Profile/CBRT Segment — cross-cutting: Generation (renewable grid integration, storage), Transmission & Distribution (heat-proofing, failure prediction), and Power Sector Planning/Market Reform. Time zone: IST. Tracking-sheet updates: reached out 21/07/2026; interest and introductory call not yet recorded — awaiting response.",
+        gender: "Female",
+        status: "Outreach initiated 21 July 2026; awaiting response",
+        profiles: [
+          { label: "LinkedIn", url: "https://linkedin.com/in/sandhyaragavan", icon: "💼" },
+          { label: "Vasudha Foundation Team Page", url: "https://vasudha-foundation.org", icon: "🏛" },
+          { label: "ResearchGate", url: "https://researchgate.net/profile/Sandhya-Sundararagavan", icon: "🔬" },
+          { label: "WRI Profile (prior role)", url: "https://wri.org/profile/sandhya-sundararagavan", icon: "🌍" },
+          { label: "Precision Resilience: Why Local Heat Intelligence Matters?", url: "https://vasudha-foundation.org/precision-resilience-why-local-heat-intelligence-matters/", icon: "📄" },
+          { label: "Landscape Review of Cooling Action in Urban India", url: "https://vasudha-foundation.org/landscape-review-of-cooling-action-in-urban-india/", icon: "📚" }
+        ],
+        publications: [
+          {
+            title: "Evaluating Energy Storage Technologies for Wind Power Integration (with Erin Baker)",
+            url: "https://www.sciencedirect.com/science/article/abs/pii/S0038092X12002253",
+            year: "2012"
+          },
+          {
+            title: "Precision Resilience: Why Local Heat Intelligence Matters? (with Dr Kala Nair K)",
+            url: "https://vasudha-foundation.org/precision-resilience-why-local-heat-intelligence-matters/",
+            year: "2026",
+            journal: "Vasudha Foundation"
+          }
+        ]
+      },
+      {
+        number: "6",
+        name: "Harsha Meenawat",
+        title: "Head, Energy and Development",
+        organisation: "WRI India",
+        type: "Think tank",
+        city: "New Delhi, India",
+        sector_expertise: "Climate resilience of decentralized renewable energy (DRE) systems; disaster-vulnerable-region energy access; Himalayan GLOF risk reduction; energy-healthcare synergies; energy and environmental governance policy",
+        ar_relevance: "Co-author of two of the most directly relevant reports found in this entire TWG research process: 'Built to Last: Making Renewable Energy Systems Climate Resilient' (WRI, 2021, with Namrata Ginoya) and 'Powering Development in Climate Vulnerable Areas: The Role of Decentralized Solar Solutions in India' (WRI, with Ginoya, Amala Devi, Pamli Deka, Bharath Jairaj) — the latter cites real disaster-damage data (Cyclone Fani caused 20% of all public property loss in the power sector in 2019, with 8+ days of grid outage during a simultaneous heatwave; Kochi airport's solar installation took 11 days to repair after 2018 floods). Also worked on two UNDP/GEF-funded Glacial Lake Outburst Flood (GLOF) risk-reduction projects in Bhutan ($7.7M and $730K), directly parallel to the Himalayan GLOF work already informing this TWG (Er. Revati Raman, Dr Akshaya Verma). Co-authored 'A Spoonful of Solar to Help the Medicine Go Down: Exploring Synergies Between Health Care and Energy' (WRI India, 2025) examining DRE interventions for healthcare across six Indian states.",
+        key_projects: "Specialisms: clean energy transition policy, energy access, decentralized renewable energy resilience, energy and environmental governance, systems modelling. Experience: MPP, Lee Kuan Yew School of Public Policy, National University of Singapore; Post Graduate Diploma in Business Management, NMIMS University Mumbai; prior roles at TERI (energy and environmental governance research) and one of India's largest infrastructure financing companies (policy advisory and strategy); authored book chapters, reports and journal articles on energy access, environmental governance and climate adaptation.",
+        cbrt_twg_role: "Energy Specialist",
+        email: "Harsha.Meenawat@wri.org",
+        phone: "",
+        linkedin: "https://linkedin.com/in/harsha-meenawat-01a0b227",
+        website: "https://wri-india.org/profile/harsha-meenawat",
+        priority_tier: "Not yet tiered",
+        notes: "CBRT relevance: decentralized renewable energy resilience design methodology (technological, organisational, financial considerations) directly transferable to CBRT's Generation Asset resilience criteria; Himalayan GLOF project experience for Hydropower segment; real disaster-damage data points (Cyclone Fani, Kochi floods) usable for CBRT hazard-impact justification. Reasoning: TWG Role — decentralized/renewable energy climate resilience lead | A&R Experience — co-authored WRI's flagship DRE climate resilience reports; Himalayan GLOF project experience in Bhutan | Energy Profile/CBRT Segment — Generation Asset Resilience (decentralized solar/DRE), Hydropower (GLOF), Energy Access in climate-vulnerable regions. If WRI representation is wanted on the TWG, source notes she is a good candidate. Time zone: IST (New Delhi). Tracking-sheet updates: reached out 21/07/2026; received interest — yes; introductory call 29/07/2026 at 9:30am UK time.",
+        gender: "Female",
+        status: "Interest received; introductory call scheduled 29 July 2026 (9:30am UK time)",
+        profiles: [
+          { label: "LinkedIn", url: "https://linkedin.com/in/harsha-meenawat-01a0b227", icon: "💼" },
+          { label: "WRI India Profile", url: "https://wri-india.org/profile/harsha-meenawat", icon: "🏛" },
+          { label: "Built to Last: Making Renewable Energy Systems Climate Resilient", url: "https://www.wri.org/insights/built-last-making-renewable-energy-systems-climate-resilient", icon: "📄" }
+        ],
+        publications: [
+          {
+            title: "Built to Last: Making Renewable Energy Systems Climate Resilient (with Namrata Ginoya)",
+            url: "https://www.wri.org/insights/built-last-making-renewable-energy-systems-climate-resilient",
+            year: "2021",
+            journal: "WRI"
+          },
+          {
+            title: "Powering Development in Climate Vulnerable Areas: The Role of Decentralized Solar Solutions in India (with Ginoya, Amala Devi, Pamli Deka, Bharath Jairaj)",
+            url: "https://www.wri.org/research/powering-development-climate-vulnerable-areas-role-decentralized-solar-solutions-india",
+            year: "2021",
+            journal: "WRI"
+          },
+          {
+            title: "Energy for Development in Climate Vulnerable Areas (with Bharath Jairaj)",
+            url: "https://wri-india.org/blogs/energy-development-climate-vulnerable-areas",
+            year: "2020",
+            journal: "WRI India Blog"
+          },
+          {
+            title: "A Spoonful of Solar to Help the Medicine Go Down: Exploring Synergies Between Health Care and Energy (lead author Lanvin Concessao, with Meenawat, Ginoya et al.)",
+            url: "https://www.wri.org/research/spoonful-solar-medicine-energy-healthcare-india",
+            year: "2023",
+            journal: "WRI India"
+          }
+        ]
+      },
+      {
+        number: "7",
+        name: "Namrata Ginoya",
+        title: "Strategic Policy Lead",
+        organisation: "Global Resilience Partnership (recently transitioned from WRI India)",
+        type: "International NGO / Partnership network",
+        city: "India / UK (Global Resilience Partnership has international presence — confirm current base)",
+        sector_expertise: "Climate resilience and disaster risk reduction across agriculture, water-sanitation, land use, forestry, health and energy access sectors; adaptation finance tracking tools; decentralized energy resilience; food systems adaptation",
+        ar_relevance: "Co-author of 'Built to Last: Making Renewable Energy Systems Climate Resilient' and 'Powering Development in Climate Vulnerable Areas' (both with Harsha Meenawat) — her author bio at WRI explicitly described her role as 'mainstreaming resilience in energy access and development policy and projects.' Spent five years on WRI's global Climate Resilience Practice (CRP) team, contributing to 'Food Systems at Risk: Transformative Adaptation for Long-Term Food Security' (WRI, with Rebecca Carter, Richard Choularton, Tyler Ferdinand, Helen Ding, Parvathi Preethan). Helped build a tracking tool for adaptation projects for India's National Adaptation Fund for Climate Change — genuine hands-on adaptation-finance-monitoring experience. Spoke at CDRI's own ICDRI 2022 conference as a named climate resilience and disaster risk reduction expert. Prior to WRI, built low-carbon climate-resilient water and sanitation infrastructure in India and Bangladesh.",
+        key_projects: "Specialisms: climate resilience, disaster risk reduction, climate equity, energy access, adaptation policy and knowledge management, climate-resilient infrastructure (water, sanitation, energy). Experience: B.Tech Civil Engineering + M.Tech Climate Change and Sustainable Development, CEPT University, Ahmedabad; progressed through WRI roles of increasing seniority (Vulnerability & Adaptation Initiative Research Analyst → Senior Project Associate → Program Manager → Senior Program Manager, Resilience and Energy); most recent WRI research examined climate change, gender and nutritional security linkages.",
+        cbrt_twg_role: "Adaptation Generalist",
+        email: "",
+        phone: "",
+        linkedin: "https://linkedin.com/in/namrataginoya",
+        website: "https://app.cdri.world/icdri2022/public/speaker-detail/ms-namrata-ginoya",
+        priority_tier: "Not yet tiered",
+        notes: "CBRT relevance: cross-sectoral adaptation mainstreaming methodology (energy, water, agriculture) directly transferable to CBRT; adaptation-finance tracking-tool-building experience (National Adaptation Fund for Climate Change) relevant to CBRT's monitoring/criteria-verification design; existing direct CDRI conference engagement. Reasoning: TWG Role — cross-sectoral adaptation mainstreaming and adaptation-finance-tracking lead | A&R Experience — 5 years on WRI's global Climate Resilience Practice team; built National Adaptation Fund project-tracking tool; CDRI conference speaker | Energy Profile/CBRT Segment — cross-cutting: Generation Asset Resilience (co-authored with Meenawat), plus broader adaptation-mainstreaming methodology applicable across CBRT sectors, not energy-exclusive. Source notes: good candidate exposure from GRP (Harsha and Namrata worked together during WRI time); strong technical work across energy and resilience, but not exclusively energy-focused. Tracking-sheet updates: reached out 21/07/2026; received interest — yes; introductory call 27/07/2026 at 10:30am UK time.",
+        gender: "Female",
+        status: "Interest received; introductory call scheduled 27 July 2026 (10:30am UK time)",
+        profiles: [
+          { label: "LinkedIn", url: "https://linkedin.com/in/namrataginoya", icon: "💼" },
+          { label: "CDRI ICDRI 2022 Speaker Profile", url: "https://app.cdri.world/icdri2022/public/speaker-detail/ms-namrata-ginoya", icon: "🌍" },
+          { label: "Built to Last: Making Renewable Energy Systems Climate Resilient", url: "https://www.wri.org/insights/built-last-making-renewable-energy-systems-climate-resilient", icon: "📄" }
+        ],
+        publications: [
+          {
+            title: "Built to Last: Making Renewable Energy Systems Climate Resilient (with Harsha Meenawat)",
+            url: "https://www.wri.org/insights/built-last-making-renewable-energy-systems-climate-resilient",
+            year: "2021",
+            journal: "WRI"
+          },
+          {
+            title: "Powering Development in Climate Vulnerable Areas: The Role of Decentralized Solar Solutions in India",
+            url: "https://d30mzt1bxg5llt.cloudfront.net/public/uploads/PDFs/powering-development-climate-vulnerable-areas.pdf",
+            year: "2021",
+            journal: "WRI"
+          },
+          {
+            title: "Food Systems at Risk: Transformative Adaptation for Long-Term Food Security (with Rebecca Carter, Richard Choularton, Tyler Ferdinand, Helen Ding, Parvathi Preethan)",
+            url: "https://www.wri.org/research/powering-development-climate-vulnerable-areas-role-decentralized-solar-solutions-india",
+            journal: "WRI"
+          }
+        ]
+      }
+    ]
   }
 ];
 
