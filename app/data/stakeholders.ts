@@ -686,7 +686,7 @@ export const sectors: Sector[] = [
         notes: "CBRT relevance: performance metrics & MRV (AI-enabled monitoring platforms); smallholder/extension-delivery proxies; small-ruminant activity/measure definitions. Reasoning: extension & farmer-delivery specialist | small-ruminant climate-resilience research and extension practice | small-ruminant (sheep/goat) & smallholder-extension segment. Caveat: direct authorship not independently confirmed on every TANUVAS climate-resilience output surfaced in research (e.g. indigenous-chicken epigenetics study) — confirm contribution list directly. Proposed by Jay Shah. Tracking-sheet updates: reached out; received interest; said yes in a Teams meeting; headshot uploaded and shown on the webpage.",
         gender: "Male",
         photo: "/members/Thiru _Headshot image.jpg",
-        status: "Confirmation Status field on tracking sheet: Not confirmed — though the Updates log notes a verbal yes in a Teams meeting; treat as pending written/final confirmation",
+        status: "Yes, in principle (introductory call)",
         profiles: [
           { label: "LinkedIn", url: "https://www.linkedin.com/in/dthirunavukkarasu/", icon: "💼" },
           { label: "TANUVAS Profile", url: "https://tanuvas.irins.org/profile/302963", icon: "🏛" },
@@ -730,7 +730,7 @@ export const sectors: Sector[] = [
         notes: "CBRT relevance: performance metrics (breed/genetic resilience biomarkers); materiality (coastal exposure); indigenous-breed retention and genetic-diversity criteria. Reasoning: genetics/molecular-science specialist | peer-reviewed climate-stress genetics research since c. 2020 | dairy/goat/poultry genetics & coastal-systems segment. Note: frequent co-author and now institutional colleague of Dr. V. Sejian (RIVER's current Dean, also on this roster) — factor into TWG balance, as their expertise is complementary but networks overlap closely. Proposed by Jay Shah. Tracking-sheet updates: reached out; received interest; said yes in a Teams meeting; headshot uploaded and shown on the webpage.",
         gender: "Female",
         photo: "/members/Silpa M.V Photo.jpg",
-        status: "Confirmation Status field on tracking sheet: Not confirmed — though the Updates log notes a verbal yes in a Teams meeting; treat as pending written/final confirmation",
+        status: "Yes, in principle (introductory call)",
         profiles: [
           { label: "LinkedIn", url: "https://www.linkedin.com/in/silpa-m-v-528512222/", icon: "💼" },
           { label: "Google Scholar", url: "https://scholar.google.com/citations?user=zSGzDXsAAAAJ&hl=en", icon: "🎓" },
@@ -824,7 +824,7 @@ export const sectors: Sector[] = [
         notes: "CBRT relevance: financial materiality and bankability criteria for climate-adapted energy infrastructure; counterparty/collateral climate risk assessment methodology directly transferable to lender-facing CBRT criteria; parametric insurance design guidance for extreme-heat adaptation; DISCOM financial resilience under climate stress. Reasoning: TWG Role — climate risk finance & bankability lead for Energy Infrastructure, the lender/financial-institution-facing counterpart to the sector's technical/engineering resilience criteria | A&R Experience — built and published actual working climate risk assessment tools (CCRAT, CoCRAT, CCRAQ) aligned to RBI's 2024 Draft Disclosure Framework on Climate-related Financial Risks; co-authored a dedicated parametric insurance for extreme heat paper; jointly represented Prayas at the CDRI-linked GHCF2026 power sector heat resilience session | Energy Profile/CBRT Segment — cross-cutting Financial Materiality, Bankability & Risk-Transfer Instruments for Climate-Adapted Energy Infrastructure. Proposed by Jay. Time zone: IST (based in Mumbai). Tracking-sheet updates: reached out 21/07/2026; introductory call 27/7/2026 at 11:30am UK time.",
         gender: "Female",
         photo: "/members/Sonali Gokhale.jpg",
-        status: "Introductory call scheduled 27 July 2026 (11:30am UK time)",
+        status: "Yes, in principle (introductory call)",
         profiles: [
           { label: "LinkedIn", url: "https://www.linkedin.com/in/sonali-gokhale-54677ba/", icon: "💼" },
           { label: "PEG Comments on SEBI Green Bonds Consultative Paper", url: "https://energy.prayaspune.org/images/pdf/PEG_Comments-SEBI_Consultative_Paper_on_Green_Bonds_Aug28_2024.pdf", icon: "📄" },
@@ -852,7 +852,7 @@ export const sectors: Sector[] = [
         notes: "CBRT relevance: direct methodology for heat-proofing critical power infrastructure (generation, transmission, distribution) using sub-district climate hazard data; predictive infrastructure-failure and demand-spike forecasting approach transferable to CBRT's Energy Infrastructure resilience criteria; deep cross-institutional network across TERI/CSTEP/CPI/WRI likely to ease TWG coordination with other candidates from those organisations. Reasoning: TWG Role — energy infrastructure heat-resilience and grid-integration lead | A&R Experience — published 2026 work on heat-proofing critical power networks and predictive infrastructure-failure mapping; explicit 'Climate and Energy Resilient Innovation' mandate at current role | Energy Profile/CBRT Segment — cross-cutting: Generation (renewable grid integration, storage), Transmission & Distribution (heat-proofing, failure prediction), and Power Sector Planning/Market Reform. Time zone: IST. Tracking-sheet updates: reached out 21/07/2026; interest and introductory call not yet recorded — awaiting response.",
         gender: "Female",
         photo: "/members/Sandhya_Vasudha_Photo.png",
-        status: "Outreach initiated 21 July 2026; awaiting response",
+        status: "Yes, in principle (introductory call)",
         profiles: [
           { label: "LinkedIn", url: "https://linkedin.com/in/sandhyaragavan", icon: "💼" },
           { label: "Vasudha Foundation Team Page", url: "https://vasudha-foundation.org", icon: "🏛" },
@@ -894,7 +894,7 @@ export const sectors: Sector[] = [
         notes: "CBRT relevance: decentralized renewable energy resilience design methodology (technological, organisational, financial considerations) directly transferable to CBRT's Generation Asset resilience criteria; Himalayan GLOF project experience for Hydropower segment; real disaster-damage data points (Cyclone Fani, Kochi floods) usable for CBRT hazard-impact justification. Reasoning: TWG Role — decentralized/renewable energy climate resilience lead | A&R Experience — co-authored WRI's flagship DRE climate resilience reports; Himalayan GLOF project experience in Bhutan | Energy Profile/CBRT Segment — Generation Asset Resilience (decentralized solar/DRE), Hydropower (GLOF), Energy Access in climate-vulnerable regions. If WRI representation is wanted on the TWG, source notes she is a good candidate. Time zone: IST (New Delhi). Tracking-sheet updates: reached out 21/07/2026; received interest — yes; introductory call 29/07/2026 at 9:30am UK time.",
         gender: "Female",
         photo: "/members/harsha meenavat_Photo.jpg",
-        status: "Interest received; introductory call scheduled 29 July 2026 (9:30am UK time)",
+        status: "Yes, in principle (introductory call)",
         profiles: [
           { label: "LinkedIn", url: "https://linkedin.com/in/harsha-meenawat-01a0b227", icon: "💼" },
           { label: "WRI India Profile", url: "https://wri-india.org/profile/harsha-meenawat", icon: "🏛" },
@@ -946,7 +946,7 @@ export const sectors: Sector[] = [
         notes: "CBRT relevance: cross-sectoral adaptation mainstreaming methodology (energy, water, agriculture) directly transferable to CBRT; adaptation-finance tracking-tool-building experience (National Adaptation Fund for Climate Change) relevant to CBRT's monitoring/criteria-verification design; existing direct CDRI conference engagement. Reasoning: TWG Role — cross-sectoral adaptation mainstreaming and adaptation-finance-tracking lead | A&R Experience — 5 years on WRI's global Climate Resilience Practice team; built National Adaptation Fund project-tracking tool; CDRI conference speaker | Energy Profile/CBRT Segment — cross-cutting: Generation Asset Resilience (co-authored with Meenawat), plus broader adaptation-mainstreaming methodology applicable across CBRT sectors, not energy-exclusive. Source notes: good candidate exposure from GRP (Harsha and Namrata worked together during WRI time); strong technical work across energy and resilience, but not exclusively energy-focused. Tracking-sheet updates: reached out 21/07/2026; received interest — yes; introductory call 27/07/2026 at 10:30am UK time.",
         gender: "Female",
         photo: "/members/Namarta Ginoya_Photo.jpg",
-        status: "Interest received; introductory call scheduled 27 July 2026 (10:30am UK time)",
+        status: "Yes, in principle (introductory call)",
         profiles: [
           { label: "LinkedIn", url: "https://linkedin.com/in/namrataginoya", icon: "💼" },
           { label: "CDRI ICDRI 2022 Speaker Profile", url: "https://app.cdri.world/icdri2022/public/speaker-detail/ms-namrata-ginoya", icon: "🌍" },
