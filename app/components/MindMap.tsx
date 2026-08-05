@@ -907,7 +907,6 @@ function DetailPanel({ info, onClose }: { info: SelectedInfo; onClose: () => voi
     const member = info.member;
     const sector = info.sectorContext;
     const color = sector?.color || '#818cf8';
-    const tier1 = member.priority_tier.includes('Tier 1');
     const anchorMember = isAnchor(member.priority_tier);
 
     return (
@@ -958,14 +957,6 @@ function DetailPanel({ info, onClose }: { info: SelectedInfo; onClose: () => voi
                     fontWeight: 700, letterSpacing: '0.04em',
                   }}>{sector.label.replace('\n', ' ')}</span>
                 )}
-                <span style={{
-                  fontSize: 9, padding: '2px 8px', borderRadius: 10, fontWeight: 700, letterSpacing: '0.05em',
-                  background: tier1 ? 'rgba(234,179,8,0.15)' : 'rgba(148,163,184,0.1)',
-                  color: tier1 ? '#fbbf24' : '#94a3b8',
-                  border: `1px solid ${tier1 ? 'rgba(234,179,8,0.3)' : 'rgba(148,163,184,0.2)'}`,
-                }}>
-                  {member.priority_tier}
-                </span>
               </div>
               <div style={{ fontSize: 16, fontWeight: 800, color: '#f1f5f9', lineHeight: 1.3, marginBottom: 3 }}>
                 {member.name}
