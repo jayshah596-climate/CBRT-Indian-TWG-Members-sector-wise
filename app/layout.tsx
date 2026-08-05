@@ -6,7 +6,7 @@ const sectorNames = sectors.map((s) => s.label.replace("\n", " ")).join(", ");
 
 export const metadata: Metadata = {
   title: "CBRT India TWG : Stakeholder Mind Map",
-  description: `Interactive mind map of India Technical Working Group candidate members for CBRT resilience criteria development across ${sectors.length} sectors. Climate Bonds Initiative USISA Programme.`,
+  description: `Interactive mind map of India Technical Working Group candidate members for CBRT resilience criteria development across ${sectors.length} sectors. Climate Bonds Initiative MFA and GEF Project.`,
   openGraph: {
     title: "CBRT India TWG : Stakeholder Mind Map",
     description: `${totalMembers} candidate members across ${sectors.length} sectors — ${sectorNames}`,

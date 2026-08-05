@@ -487,10 +487,13 @@ export default function MindMap() {
           }}>C</div>
           <div>
             <div style={{ fontSize: 15, fontWeight: 700, color: '#e2e8f0', lineHeight: 1.2 }}>
-              CBRT India TWG — Stakeholder Map
+              CBRT India TWG: Stakeholder Map
             </div>
             <div style={{ fontSize: 11, color: '#64748b', lineHeight: 1.2 }}>
-              Climate Bonds Initiative · USISA Programme · Jay Shah · May 2026
+              Climate Bonds Initiative · MFA and GEF Project · Jay Shah · May 2026
+            </div>
+            <div style={{ fontSize: 10, color: '#475569', lineHeight: 1.2, marginTop: 2 }}>
+              Contact Jay Shah for the latest roster updates
             </div>
           </div>
         </div>
@@ -528,6 +531,18 @@ export default function MindMap() {
         transition: 'right 0.3s ease',
       }}>
         🖱 Scroll to zoom · Drag to pan · Click nodes to explore
+      </div>
+
+      {/* Meeting schedule hint */}
+      <div style={{
+        position: 'absolute', bottom: 16, left: 16, zIndex: 10,
+        background: 'rgba(15,23,42,0.75)',
+        border: '1px solid rgba(255,255,255,0.06)',
+        borderRadius: 8, padding: '6px 12px',
+        fontSize: 10, color: '#64748b',
+        backdropFilter: 'blur(4px)',
+      }}>
+        👆 Click a sector icon to check its meeting schedule
       </div>
 
       <svg ref={svgRef} style={{ width: '100%', height: '100%' }} />
