@@ -823,6 +823,7 @@ export const sectors: Sector[] = [
         priority_tier: "Not yet tiered",
         notes: "CBRT relevance: financial materiality and bankability criteria for climate-adapted energy infrastructure; counterparty/collateral climate risk assessment methodology directly transferable to lender-facing CBRT criteria; parametric insurance design guidance for extreme-heat adaptation; DISCOM financial resilience under climate stress. Reasoning: TWG Role — climate risk finance & bankability lead for Energy Infrastructure, the lender/financial-institution-facing counterpart to the sector's technical/engineering resilience criteria | A&R Experience — built and published actual working climate risk assessment tools (CCRAT, CoCRAT, CCRAQ) aligned to RBI's 2024 Draft Disclosure Framework on Climate-related Financial Risks; co-authored a dedicated parametric insurance for extreme heat paper; jointly represented Prayas at the CDRI-linked GHCF2026 power sector heat resilience session | Energy Profile/CBRT Segment — cross-cutting Financial Materiality, Bankability & Risk-Transfer Instruments for Climate-Adapted Energy Infrastructure. Proposed by Jay. Time zone: IST (based in Mumbai). Tracking-sheet updates: reached out 21/07/2026; introductory call 27/7/2026 at 11:30am UK time.",
         gender: "Female",
+        photo: "/members/Sonali Gokhale.jpg",
         status: "Introductory call scheduled 27 July 2026 (11:30am UK time)",
         profiles: [
           { label: "LinkedIn", url: "https://www.linkedin.com/in/sonali-gokhale-54677ba/", icon: "💼" },
@@ -850,6 +851,7 @@ export const sectors: Sector[] = [
         priority_tier: "Not yet tiered",
         notes: "CBRT relevance: direct methodology for heat-proofing critical power infrastructure (generation, transmission, distribution) using sub-district climate hazard data; predictive infrastructure-failure and demand-spike forecasting approach transferable to CBRT's Energy Infrastructure resilience criteria; deep cross-institutional network across TERI/CSTEP/CPI/WRI likely to ease TWG coordination with other candidates from those organisations. Reasoning: TWG Role — energy infrastructure heat-resilience and grid-integration lead | A&R Experience — published 2026 work on heat-proofing critical power networks and predictive infrastructure-failure mapping; explicit 'Climate and Energy Resilient Innovation' mandate at current role | Energy Profile/CBRT Segment — cross-cutting: Generation (renewable grid integration, storage), Transmission & Distribution (heat-proofing, failure prediction), and Power Sector Planning/Market Reform. Time zone: IST. Tracking-sheet updates: reached out 21/07/2026; interest and introductory call not yet recorded — awaiting response.",
         gender: "Female",
+        photo: "/members/Sandhya_Vasudha_Photo.png",
         status: "Outreach initiated 21 July 2026; awaiting response",
         profiles: [
           { label: "LinkedIn", url: "https://linkedin.com/in/sandhyaragavan", icon: "💼" },
