@@ -971,6 +971,52 @@ export const sectors: Sector[] = [
             journal: "WRI"
           }
         ]
+      },
+      {
+        number: "8",
+        name: "Shantanu Srivastava",
+        title: "Research Lead, Sustainable Finance & Climate Risk, South Asia",
+        organisation: "Institute for Energy Economics and Financial Analysis (IEEFA)",
+        type: "Independent Research / Think Tank (NGO)",
+        city: "India (South Asia)",
+        sector_expertise: "Sustainable finance & climate risk for energy infrastructure; India electricity market financing, policy & technology; climate transition planning & disclosures (BRSR/ISSB/TPT); ESG profiling of listed Indian energy companies; green taxonomy design; blended finance for energy transition; just transition financing (Jharkhand); physical & transition climate risk for financial institutions; renewable energy (solar, wind, BESS, green hydrogen) investment analysis; resilience bonds & adaptation finance; COP climate finance outcomes",
+        ar_relevance: "Only IEEFA South Asia lead dedicated to sustainable finance AND climate risk for the Indian energy sector. Directly relevant to CBRT because he works at the intersection of climate risk taxonomy design, resilience finance, and energy infrastructure — including explicit work on India's green taxonomy and resilience bond frameworks. His research on physical and transition climate risks to financial institutions' lending portfolios maps precisely onto CBRT criteria design needs for energy infrastructure.",
+        key_projects: "Specialisms: sustainable finance for energy transition; climate risk (physical & transition) for financial institutions; ESG & climate disclosure (BRSR, ISSB, TPT frameworks); green/resilience taxonomy design; blended finance; just transition financing; Indian electricity market financing & policy; RE investment (solar, wind, BESS, green hydrogen); corporate climate transition planning; COP climate finance. Experience: 8+ years (corporate finance + IEEFA); CFA charterholder; Engineering (NMIMS) + MBA Finance (IMT).",
+        cbrt_twg_role: "Sustainable Finance & Climate Risk Specialist (Energy Specialist — Finance, ESG & Transition Risk)",
+        email: "ssrivastava@ieefa.org",
+        phone: "",
+        linkedin: "https://www.linkedin.com/in/shantanu-srivastava-cfa-a077a7a5",
+        website: "https://ieefa.org/people/shantanu-srivastava",
+        priority_tier: "Not yet tiered",
+        notes: "CBRT relevance: climate risk criteria for energy infrastructure finance (physical + transition risk thresholds); green/resilience taxonomy alignment; ESG disclosure standards for energy companies; blended finance criteria; just-transition eligibility standards; resilience bond frameworks for energy infrastructure; corporate climate transition plan standards. Reasoning: TWG Role — high priority, most directly relevant to CBRT criteria design of any finance-side candidate; works explicitly on India green taxonomy, resilience bonds, adaptation finance and climate risk thresholds for energy infrastructure | A&R Experience — physical climate risk (floods, cyclones, droughts) to financial institutions' energy lending portfolios; resilience bond frameworks; adaptation-focused green loans; India's evolving taxonomy for 'resilient' activities | CBRT Segment — climate risk criteria (physical + transition) for energy infrastructure, green/resilience taxonomy criteria, sustainable finance eligibility thresholds, ESG disclosure and corporate transition plan standards, blended finance and just-transition criteria. Unique among all TWG candidates for combining energy sector depth with taxonomy-specific sustainable finance expertise. Time zone: India (IST).",
+        gender: "Male",
+        status: "Not yet contacted",
+        profiles: [
+          { label: "IEEFA Profile", url: "https://ieefa.org/people/shantanu-srivastava", icon: "🏛" },
+          { label: "LinkedIn", url: "https://www.linkedin.com/in/shantanu-srivastava-cfa-a077a7a5", icon: "💼" }
+        ],
+        publications: [
+          {
+            title: "Indian financial system needs a green taxonomy for resilience to climate risks",
+            url: "https://ieefa.org/resources/indian-financial-system-needs-green-taxonomy-resilience-climate-risks",
+            journal: "IEEFA"
+          },
+          {
+            title: "India should aim for a truly green taxonomy to gain global investor buy-in",
+            url: "https://ieefa.org/resources/india-should-aim-truly-green-taxonomy-gain-global-investor-buy",
+            journal: "IEEFA"
+          },
+          {
+            title: "Financing India's climate future: From fragmented flows to systemic resilience",
+            url: "https://ieefa.org/resources/financing-indias-climate-future-fragmented-flows-systemic-resilience",
+            journal: "IEEFA"
+          },
+          {
+            title: "Building a climate finance ecosystem: India's draft taxonomy framework",
+            url: "https://ieefa.org/resources/building-climate-finance-ecosystem-indias-draft-taxonomy-framework",
+            journal: "IEEFA"
+          }
+        ]
       }
     ]
   },
