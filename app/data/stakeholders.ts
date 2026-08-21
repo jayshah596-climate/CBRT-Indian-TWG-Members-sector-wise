@@ -945,7 +945,7 @@ export const sectors: Sector[] = [
         priority_tier: "Not yet tiered",
         notes: "CBRT relevance: cross-sectoral adaptation mainstreaming methodology (energy, water, agriculture) directly transferable to CBRT; adaptation-finance tracking-tool-building experience (National Adaptation Fund for Climate Change) relevant to CBRT's monitoring/criteria-verification design; existing direct CDRI conference engagement. Reasoning: TWG Role — cross-sectoral adaptation mainstreaming and adaptation-finance-tracking lead | A&R Experience — 5 years on WRI's global Climate Resilience Practice team; built National Adaptation Fund project-tracking tool; CDRI conference speaker | Energy Profile/CBRT Segment — cross-cutting: Generation Asset Resilience (co-authored with Meenawat), plus broader adaptation-mainstreaming methodology applicable across CBRT sectors, not energy-exclusive. Source notes: good candidate exposure from GRP (Harsha and Namrata worked together during WRI time); strong technical work across energy and resilience, but not exclusively energy-focused.",
         gender: "Female",
-        photo: "/members/Namarta Ginoya_Photo.jpg",
+        photo: "/members/Namrata Ginoya.jpg",
         status: "Yes, in principle (introductory call)",
         profiles: [
           { label: "LinkedIn", url: "https://linkedin.com/in/namrataginoya", icon: "💼" },
@@ -990,6 +990,7 @@ export const sectors: Sector[] = [
         priority_tier: "Not yet tiered",
         notes: "CBRT relevance: climate risk criteria for energy infrastructure finance (physical + transition risk thresholds); green/resilience taxonomy alignment; ESG disclosure standards for energy companies; blended finance criteria; just-transition eligibility standards; resilience bond frameworks for energy infrastructure; corporate climate transition plan standards. Reasoning: TWG Role — high priority, most directly relevant to CBRT criteria design of any finance-side candidate; works explicitly on India green taxonomy, resilience bonds, adaptation finance and climate risk thresholds for energy infrastructure | A&R Experience — physical climate risk (floods, cyclones, droughts) to financial institutions' energy lending portfolios; resilience bond frameworks; adaptation-focused green loans; India's evolving taxonomy for 'resilient' activities | CBRT Segment — climate risk criteria (physical + transition) for energy infrastructure, green/resilience taxonomy criteria, sustainable finance eligibility thresholds, ESG disclosure and corporate transition plan standards, blended finance and just-transition criteria. Unique among all TWG candidates for combining energy sector depth with taxonomy-specific sustainable finance expertise. Time zone: India (IST).",
         gender: "Male",
+        photo: "/members/Shantanu-Srivastava-400px.png",
         status: "Not yet contacted",
         profiles: [
           { label: "IEEFA Profile", url: "https://ieefa.org/people/shantanu-srivastava", icon: "🏛" },
